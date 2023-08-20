@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "es2016",
+    "jsx": "react-jsx",
+    "module": "commonjs",
+    "allowUnreachableCode": false,
+    "strict": true,
+    "noUnusedParameters": true,
+    "noUnusedLocals": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "noEmit": true,
+    "skipLibCheck": true,
+    "allowJs": true,
+    "esModuleInterop": true,
+    "baseUrl": "./",
+    "paths": {
+      "@shared/*": ["packages/shared/*"],
+      "@client/*": ["packages/client/*"],
+      "@webpack/*": ["webpack/*"]
+    }
+  },
+  "ts-node": {
+    "files": true
+  }
+}
