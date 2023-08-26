@@ -1,5 +1,5 @@
+import { createStore } from "@shared/store/create-store";
 import { AxiosRequestConfig } from "axios";
-import { createStore } from "packages/store/create-store";
 
 export enum WebpackChunksNames {
   Vendor = "vendor",

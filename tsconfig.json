@@ -18,7 +18,8 @@
       "@shared/*": ["packages/shared/*"],
       "@client/*": ["packages/client/*"],
       "@webpack/*": ["webpack/*"]
-    }
+    },
+    "plugins": [{ "name": "typescript-plugin-css-modules" }]
   },
   "ts-node": {
     "files": true

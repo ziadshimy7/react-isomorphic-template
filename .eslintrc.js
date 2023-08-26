@@ -56,7 +56,6 @@ module.exports = {
         tsx: "never",
       },
     ],
-    "no-console": "error",
     "func-names": "error",
     "arrow-body-style": ["error", "as-needed"],
     "react/require-default-props": "off",

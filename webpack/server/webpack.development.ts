@@ -25,20 +25,3 @@ const serverDevelopmentConfiguration = merge(serverCommonConfiguration, {
 });
 
 export default serverDevelopmentConfiguration;
-
-// // eslint-disable-next-line import/no-extraneous-dependencies
-// import MiniCssExtractPlugin from "mini-css-extract-plugin";
-// import merge from "webpack-merge";
-// import { serverCommonConfiguration } from "./webpack.common";
-
-// const serverDevelopmentConfiguration = merge(serverCommonConfiguration, {
-//   mode: "development",
-//   stats: "minimal",
-//   plugins: [
-//     new MiniCssExtractPlugin({
-//       filename: "[name].css",
-//     }),
-//   ],
-// });
-
-// export default serverDevelopmentConfiguration;
