@@ -5,18 +5,36 @@ const HomePage = dynamic(
   () =>
     import(
       /* webpackChunkName: "home-page" */
-      "@shared/containers/home-page"
+      "@shared/pages/index"
     ),
   { asset: "home-page" }
 );
 
-const Test = dynamic(
+const AuthLayout = dynamic(
   () =>
     import(
-      /* webpackChunkName: "test" */
-      "@shared/components/test"
+      /* webpackChunkName: "auth-layout" */
+      "@shared/pages/auth/_layout"
     ),
-  { asset: "test" }
+  { asset: "auth-layout" }
+);
+
+const AuthRegisterPage = dynamic(
+  () =>
+    import(
+      /* webpackChunkName: "register-page" */
+      "@shared/pages/auth/register"
+    ),
+  { asset: "register-page" }
+);
+
+const AuthLoginPage = dynamic(
+  () =>
+    import(
+      /* webpackChunkName: "login-page" */
+      "@shared/pages/auth/login"
+    ),
+  { asset: "login-page" }
 );
 
 export const routes: RouteObject[] = [
@@ -25,7 +43,11 @@ export const routes: RouteObject[] = [
     element: <HomePage />,
   },
   {
-    path: "test",
-    element: <Test />,
+    path: "auth",
+    element: <AuthLayout />,
+    children: [
+      { index: true, element: <AuthLoginPage /> },
+      { path: "register", element: <AuthRegisterPage /> },
+    ],
   },
 ];
