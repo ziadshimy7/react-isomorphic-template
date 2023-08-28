@@ -1,0 +1,17 @@
+@import "@shared/styles/variables";
+@import "@shared/styles/mixins";
+
+.modal {
+  position: fixed;
+  z-index: 200;
+  display: flex;
+  overflow: hidden;
+  align-items: flex-end;
+  justify-content: center;
+  inset: 0;
+  outline: none;
+
+  @include more-than-mobile {
+    align-items: center;
+  }
+}

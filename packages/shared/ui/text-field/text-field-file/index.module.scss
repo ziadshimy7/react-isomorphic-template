@@ -1,0 +1,31 @@
+@import "@shared/styles/variables";
+@import "@shared/styles/mixins";
+
+.text_field {
+  display: flex;
+  flex-direction: column;
+
+  &__file {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    svg {
+      margin-right: 12px;
+      fill: $grey-500-color;
+    }
+
+    input {
+      display: none;
+    }
+  }
+
+  &__helper_text {
+    min-height: 1.5em;
+    font-size: 14px;
+
+    &__error {
+      color: $error-color;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+@import "@shared/styles/variables";
+@import "@shared/styles/mixins";
+
+.backdrop {
+  position: fixed;
+  z-index: $backdrop-z-index;
+  background-color: black;
+  inset: 0;
+  opacity: 0.4;
+
+  &--invisible {
+    background-color: transparent;
+  }
+}

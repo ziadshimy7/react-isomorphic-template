@@ -1,0 +1,42 @@
+@import "swiper/swiper";
+@import "swiper/components/navigation/navigation";
+@import "swiper/components/pagination/pagination";
+@import "@shared/styles/variables";
+@import "@shared/styles/mixins";
+
+@mixin swiper-button {
+  display: none;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  margin-top: 0;
+  background-color: #e0e0e0b3;
+  background-image: url("/images/slider/navigation-arrow.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform: translateY(-50%);
+
+  @include more-than-mobile {
+    display: block;
+  }
+
+  &::after {
+    content: "";
+  }
+}
+
+.swiper-button-disabled {
+  pointer-events: all !important;
+}
+
+.swiper-button-prev {
+  @include swiper-button;
+
+  transform: rotate(180deg) translateY(50%);
+}
+
+.swiper-button-next {
+  @include swiper-button;
+
+  transform: translateY(-50%);
+}

@@ -1,0 +1,57 @@
+@import "@shared/styles/variables";
+@import "@shared/styles/mixins";
+
+.burger_icon {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  transform: rotate(0deg);
+  transition: 0.5s ease-in-out;
+
+  span {
+    position: absolute;
+    left: 2px;
+    display: block;
+    width: 20px;
+    height: 2px;
+    border-radius: 3px;
+    background: $text-primary-color;
+    transform: rotate(0deg);
+    transition: 200ms ease-in-out;
+
+    &:nth-child(1) {
+      top: 4px;
+    }
+
+    &:nth-child(2) {
+      top: 12px;
+    }
+
+    &:nth-child(3) {
+      top: 20px;
+      width: 14px;
+    }
+  }
+
+  &.open {
+    span {
+      &:nth-child(1) {
+        top: 11px;
+        left: 0;
+        width: 24px;
+        transform: rotate(45deg);
+      }
+
+      &:nth-child(2) {
+        opacity: 0;
+      }
+
+      &:nth-child(3) {
+        top: 11px;
+        left: 0;
+        width: 24px;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}

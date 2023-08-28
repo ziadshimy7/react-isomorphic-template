@@ -1,0 +1,12 @@
+@import "@shared/styles/mixins";
+
+.dialog_layout {
+  height: 100%;
+  box-sizing: border-box;
+  border-radius: inherit;
+
+  @include more-than-mobile {
+    width: 350px;
+    min-height: 3rem;
+  }
+}

@@ -1,0 +1,10 @@
+@import "@shared/styles/mixins";
+
+.popover_layout {
+  box-sizing: border-box;
+  border-radius: inherit;
+
+  @include more-than-mobile {
+    min-height: 3rem;
+  }
+}

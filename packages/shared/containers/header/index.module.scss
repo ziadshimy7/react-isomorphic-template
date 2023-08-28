@@ -1,11 +1,12 @@
 @import "@shared/styles/mixins";
+@import "@shared/styles/variables";
 
 .header {
   display: flex;
   justify-content: space-between;
   padding: 20px;
   align-items: center;
-  background-color: #3368e4;
+  background-color: $primary-color;
 
   @include more-than-tablet {
     padding: 30px 20px;
@@ -95,7 +96,7 @@
       border: 3px solid #fff;
       background-color: #fff;
       border-radius: 10px;
-      color: #3368e4;
+      color: $primary-color;
     }
   }
 

@@ -1,0 +1,129 @@
+@import "@shared/styles/variables";
+@import "@shared/styles/mixins";
+
+.dialog_slider {
+  margin: 0;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  height: 100%;
+
+  &__slide {
+    width: 100%;
+    aspect-ratio: 762 / 1100;
+
+    @include more-than-mobile {
+      height: 100%;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      margin: 0 auto;
+      object-fit: contain;
+    }
+  }
+
+  @include less-than-tablet {
+    padding-bottom: 30px !important;
+
+    :global(.swiper-pagination) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      overflow: visible;
+
+      :global(.swiper-pagination-bullet) {
+        display: none;
+        margin: 0 !important;
+      }
+
+      :global(.swiper-pagination-bullet-active) {
+        display: block;
+        width: 8px;
+        height: 8px;
+        border: 3px solid #deb6cd;
+        background: white;
+        flex-shrink: 0;
+      }
+
+      :global(.swiper-pagination-bullet-active-next),
+      :global(.swiper-pagination-bullet-active-prev) {
+        display: block;
+        width: 12px;
+        height: 12px;
+        background: #deb6cd;
+        opacity: 1;
+        flex-shrink: 0;
+      }
+
+      :global(.swiper-pagination-bullet-active-next-next),
+      :global(.swiper-pagination-bullet-active-prev-prev) {
+        display: block;
+        width: 12px;
+        height: 12px;
+        background: #deb6cd;
+        opacity: 1;
+        flex-shrink: 0;
+      }
+    }
+  }
+
+  @include more-than-tablet {
+    margin-bottom: 30px !important;
+
+    :global(.swiper-button-prev) {
+      left: 145px;
+    }
+
+    :global(.swiper-button-next) {
+      right: 40px;
+    }
+
+    :global(.swiper-pagination) {
+      top: 0;
+      bottom: 0;
+      left: 0;
+      display: grid;
+      width: min-content;
+      align-content: flex-start;
+      align-items: flex-start;
+      background-color: white;
+      grid-auto-flow: row;
+      overflow-y: auto;
+      row-gap: 0.5rem;
+      scrollbar-width: 0;
+      padding: 2rem;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+
+    :global(.swiper-pagination-bullet.swiper-pagination-bullet-active) {
+      width: auto;
+      height: auto;
+      border: 1px solid $primary-color;
+    }
+
+    :global(.swiper-pagination-bullet) {
+      width: auto;
+      height: auto;
+      border: 1px solid $grey-400-color;
+      border-radius: 0.5rem;
+      margin: 0 !important;
+      background: none;
+      opacity: 1;
+
+      img {
+        display: block;
+        width: 80px;
+        height: 80px;
+        border-radius: inherit;
+        object-fit: contain;
+      }
+    }
+  }
+}

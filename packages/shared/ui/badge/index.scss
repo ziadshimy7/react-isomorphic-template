@@ -1,0 +1,25 @@
+@import "@shared/styles/variables";
+@import "@shared/styles/mixins";
+
+.badge {
+  position: relative;
+  display: inline-flex;
+
+  &__content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 4px;
+    border-radius: 10px;
+    background-color: $secondary-color;
+    color: white;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+    transform: translate(50%, -50%);
+    transform-origin: 100% 0;
+    white-space: nowrap;
+  }
+}

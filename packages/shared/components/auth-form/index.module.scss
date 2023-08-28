@@ -1,0 +1,15 @@
+@import "@shared/styles/mixins";
+@import "@shared/styles/variables";
+
+.auth_form {
+  display: flex;
+  flex-direction: column;
+
+  &__icons {
+    fill: $grey-500-color !important;
+  }
+
+  &__submit_button {
+    @include primary-button;
+  }
+}

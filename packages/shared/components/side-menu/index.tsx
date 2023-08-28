@@ -51,7 +51,7 @@ export const SideMenu: FC<SideMenuProps> = ({
       </li>
       <li>
         <LoginSharpIcon />
-        <Link to="/auth/login">Login</Link>
+        <Link to="/auth">Login</Link>
       </li>
     </ul>
   </aside>

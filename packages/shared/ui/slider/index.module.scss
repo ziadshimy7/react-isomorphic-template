@@ -1,0 +1,14 @@
+.scroll_container {
+  overflow: auto;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: flex-start;
+    width: fit-content;
+  }
+}

@@ -1,0 +1,22 @@
+@import "@shared/styles/mixins";
+
+.popper_arrow {
+  z-index: -1;
+  display: none;
+
+  @include more-than-mobile {
+    display: block;
+  }
+
+  &::before {
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    content: "";
+    transform: translateX(0) rotate(45deg);
+    transform-origin: center;
+  }
+}

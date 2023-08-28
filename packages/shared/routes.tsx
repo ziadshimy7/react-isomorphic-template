@@ -1,6 +1,15 @@
 import { RouteObject } from "react-router-dom";
 import { dynamic } from "./utils/dynamic";
 
+const MainLayout = dynamic(
+  () =>
+    import(
+      /* webpackChunkName: "main-layout" */
+      "@shared/pages/_layout"
+    ),
+  { asset: "main-layout" }
+);
+
 const HomePage = dynamic(
   () =>
     import(
@@ -40,14 +49,20 @@ const AuthLoginPage = dynamic(
 export const routes: RouteObject[] = [
   {
     path: "/",
-    element: <HomePage />,
-  },
-  {
-    path: "auth",
-    element: <AuthLayout />,
+    element: <MainLayout />,
     children: [
-      { index: true, element: <AuthLoginPage /> },
-      { path: "register", element: <AuthRegisterPage /> },
+      {
+        index: true,
+        element: <HomePage />,
+      },
+      {
+        path: "auth",
+        element: <AuthLayout />,
+        children: [
+          { index: true, element: <AuthLoginPage /> },
+          { path: "register", element: <AuthRegisterPage /> },
+        ],
+      },
     ],
   },
 ];

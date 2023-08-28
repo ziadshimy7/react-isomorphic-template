@@ -1,3 +1,5 @@
+@import "@shared/styles/variables";
+
 @mixin reset-scrollbar {
   scrollbar-width: 0;
 
@@ -97,5 +99,52 @@
 @mixin more-than-laptop {
   @media (min-width: 1280px) {
     @content;
+  }
+}
+
+@mixin base-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: transparent;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+@mixin primary-button {
+  @include base-button;
+
+  border: 1px solid $primary-color;
+  background-color: $primary-color;
+  color: white;
+
+  &:disabled {
+    border: 1px solid $text-grey-color;
+    background-color: $text-grey-color;
+    cursor: not-allowed;
+  }
+}
+
+@mixin outline-button {
+  @include base-button;
+
+  border: 1px solid $primary-color;
+  color: $primary-color;
+  transition: box-shadow 200ms;
+
+  &:disabled {
+    border-color: $text-grey-color;
+    color: $text-grey-color;
+    cursor: not-allowed;
+  }
+
+  &:hover:not(:disabled) {
+    box-shadow: inset 0 0 0 1px $primary-color;
   }
 }

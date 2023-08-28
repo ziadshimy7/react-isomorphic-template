@@ -1,0 +1,51 @@
+@import "@shared/styles/mixins";
+@import "@shared/styles/variables";
+
+.radio {
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+  cursor: pointer;
+  justify-content: space-between;
+
+  &--reverse {
+    flex-direction: row-reverse;
+  }
+
+  &__visible {
+    width: 1.25rem;
+    height: 1.25rem;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    box-shadow: 0 0 0 1px $text-grey-color;
+  }
+
+  &__hidden {
+    position: absolute;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    margin: 0;
+    clip: rect(0 0 0 0);
+
+    &:checked + .radio__visible {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18' fill='%23991e66' %3E%3Ccircle cx='9' cy='9' r='7'%3E%3C/circle%3E%3C/svg%3E");
+      box-shadow: 0 0 0 1px $primary-color;
+      fill: $primary-color;
+    }
+
+    &:focus + .radio__visible {
+      box-shadow: 0 0 0 1px $primary-color, 0 0 0 2px $primary-color;
+    }
+
+    &:disabled + .radio__visible {
+      box-shadow: 0 0 0 1px $text-grey-color;
+    }
+
+    &:checked:disabled + .radio__visible {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18' fill='%2372757f' %3E%3Ccircle cx='9' cy='9' r='7'%3E%3C/circle%3E%3C/svg%3E");
+    }
+  }
+}

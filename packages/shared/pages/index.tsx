@@ -1,8 +1,6 @@
-import { HeaderContainer } from "@shared/containers/header";
 import HomeContainer from "@shared/containers/home-page";
 import { useSetMeta } from "@shared/utils/hooks/use-set-meta";
 import { FC } from "react";
-import { ScrollRestoration } from "react-router-dom";
 
 const HomePage: FC = () => {
   useSetMeta({
@@ -13,9 +11,7 @@ const HomePage: FC = () => {
 
   return (
     <div>
-      <HeaderContainer />
       <HomeContainer />
-      <ScrollRestoration />
     </div>
   );
 };

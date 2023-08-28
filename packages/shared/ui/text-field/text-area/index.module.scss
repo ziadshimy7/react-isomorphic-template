@@ -1,0 +1,81 @@
+@import "@shared/styles/variables";
+@import "@shared/styles/mixins";
+
+.text_field {
+  display: flex;
+  flex-direction: column;
+
+  &__wrapper {
+    display: flex;
+    box-shadow: inset 0 0 0 2px $grey-400-color;
+    border: 0;
+    border-radius: 4px;
+    outline: none;
+    max-width: 100%;
+    background-color: $grey-300-color;
+    padding: 12px 16px;
+    height: 100%;
+
+    &__star {
+      position: relative;
+
+      &::before {
+        content: "";
+        width: 14px;
+        height: 14px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23991e66' stroke='%23FFFFFF' stroke-width='2' %3E%3Cpath d='M11.9992 1.2002L15.7573 6.82766L22.2706 8.66281L18.0799 13.9759L18.3473 20.7376L11.9992 18.3938L5.65114 20.7376L5.91854 13.9759L1.72781 8.66281L8.24116 6.82766L11.9992 1.2002Z'%3E%3C/path%3E%3C/svg%3E");
+        line-height: 1;
+        position: absolute;
+        font-size: 12px;
+        left: -4px;
+        top: -4px;
+        color: #991e66;
+      }
+    }
+
+    &__text_area {
+      flex-grow: 1;
+      border: none;
+      background-color: transparent;
+      font-family: inherit;
+      font-size: inherit;
+      outline: none;
+      resize: none;
+      color: #000;
+      width: 100%;
+
+      &__resizable {
+        resize: both;
+      }
+    }
+
+    &__error {
+      box-shadow: inset 0 0 0 1px $error-color;
+
+      &:focus-within {
+        box-shadow: inset 0 0 0 2px $error-color !important;
+      }
+
+      &:hover:not(:focus-within) {
+        box-shadow: inset 0 0 0 2px $error-color !important;
+      }
+    }
+
+    &:focus-within {
+      box-shadow: inset 0 0 0 2px $primary-color;
+    }
+
+    &:hover:not(:focus-within) {
+      box-shadow: inset 0 0 0 2px $primary-color;
+    }
+  }
+
+  &__helper_text {
+    min-height: 1.5em;
+    font-size: 14px;
+
+    &__error {
+      color: $error-color;
+    }
+  }
+}

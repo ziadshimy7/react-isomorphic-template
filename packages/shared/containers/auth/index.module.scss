@@ -1,0 +1,28 @@
+@import "@shared/styles/mixins";
+@import "@shared/styles/variables";
+
+.auth__form {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 50px;
+  gap: 35px;
+  box-shadow: rgba(0, 0, 0, 0.14) 0px 2px 4px, rgba(0, 0, 0, 0.12) 0px 3px 4px,
+    rgba(0, 0, 0, 0.2) 0px 1px 5px;
+  height: fit-content;
+  justify-self: center;
+  background-color: #fff;
+
+  @include more-than-mobile {
+    padding: 80px 50px;
+    gap: 60px;
+    border-radius: 10px;
+  }
+
+  @include more-than-laptop {
+    margin-top: 30px;
+  }
+
+  &__title {
+    color: $grey-500-color;
+  }
+}

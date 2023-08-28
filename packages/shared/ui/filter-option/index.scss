@@ -1,0 +1,36 @@
+@import "@shared/styles/mixins";
+@import "@shared/styles/variables";
+
+.filter_option {
+  padding: 2px;
+
+  &__link {
+    @include reset-link;
+
+    &__input {
+      padding: 6px;
+      pointer-events: none;
+
+      &__label {
+        display: flex;
+        flex-grow: 1;
+        align-items: center;
+
+        &__color {
+          margin-right: 0.5rem;
+        }
+
+        &__label {
+          flex-grow: 1;
+          font-size: 18px;
+        }
+
+        &__secondary_label {
+          margin-left: 0.5rem;
+          color: $text-grey-color;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

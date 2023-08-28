@@ -1,0 +1,11 @@
+@import "@shared/styles/mixins";
+@import "@shared/styles/variables";
+
+.filter_block {
+  &__items {
+    @include reset-list;
+
+    overflow: auto;
+    max-height: calc(42px * 11);
+  }
+}

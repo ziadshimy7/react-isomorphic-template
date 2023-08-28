@@ -1,0 +1,21 @@
+@import "@shared/styles/variables";
+@import "@shared/styles/mixins";
+
+.auth_layout {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  background: url("/images/home-page/auth-background-4.jpg");
+  background-position: bottom;
+  background-size: cover;
+
+  @include more-than-laptop {
+    width: 100%;
+    display: grid;
+    grid-auto-flow: column;
+    color: #fff;
+    gap: 20px;
+    height: 90vh;
+  }
+}
