@@ -2,7 +2,7 @@ import { FC } from "react";
 import { useSelector } from "react-redux";
 
 import { HeadMeta } from "@shared/components/head-meta";
-import { metaSelector } from "@shared/store/slices/selectors";
+import { metaSelector } from "@shared/store/ui/selectors";
 
 export const HeadMetaContainer: FC = () => {
   const meta = useSelector(metaSelector);

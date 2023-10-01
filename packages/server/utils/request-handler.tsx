@@ -12,6 +12,7 @@ import MobileDetect from "mobile-detect";
 import { RouteMatch } from "react-router-dom";
 import { isValidElement } from "react";
 import { createStore } from "@shared/store/create-store";
+import { getEnvironmentVariablesMarkup } from "@shared/utils/get-environment-variables";
 import { createFetchRequest } from "./create-fetch-request";
 import { reduceAssets } from "./reduce-assets";
 import { readJsonFile } from "./read-json-file";
@@ -75,7 +76,8 @@ export const requestHandler: RequestHandler = async (request, response) => {
       bootstrapScriptContent: `
       ${getCssAssetsMarkup(pageAssets.css)}
       ${getJsAssetsMarkup(pageAssets.js)}
-      ${getPreloadedStateMarkup(store)}`,
+      ${getPreloadedStateMarkup(store)}
+      ${getEnvironmentVariablesMarkup()}`,
 
       onShellReady() {
         response.setHeader("Content-type", "text/html");

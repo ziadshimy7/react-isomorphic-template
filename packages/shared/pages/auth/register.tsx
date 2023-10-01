@@ -1,5 +1,7 @@
 import { FC } from "react";
 
-const AuthRegisterPage: FC = () => <div>Register</div>;
+import { AuthRegisterContainer } from "@shared/containers/auth/register-container";
+
+const AuthRegisterPage: FC = () => <AuthRegisterContainer />;
 
 export default AuthRegisterPage;

@@ -1,4 +1,4 @@
-import { UiState } from "../types/ui";
+import { UiState } from "./types";
 
 export const uiDomain = "ui" as const;
 

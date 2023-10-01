@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { DeviceType, Meta } from "../types/ui";
-import { uiDomain, uiInitialState } from "../constants/ui";
+import { DeviceType, Meta } from "./types";
+import { uiDomain, uiInitialState } from "./constants";
 
 export const uiSlice = createSlice({
   name: uiDomain,

@@ -4,12 +4,85 @@
 .auth_form {
   display: flex;
   flex-direction: column;
+  gap: 10px;
+
+  @include more-than-tablet {
+    display: grid;
+    justify-content: center;
+    grid-template-areas:
+      "username email . ."
+      "name last_name . ."
+      "phone date card ."
+      "password confirm_password . ."
+      "submit submit submit submit";
+
+    grid-template-columns: 1fr 1fr;
+  }
 
   &__icons {
-    fill: $grey-500-color !important;
+    fill: #311044 !important;
   }
 
   &__submit_button {
     @include primary-button;
+
+    grid-area: submit;
+    justify-self: center;
+    color: #fff;
+
+    @include more-than-mobile {
+      padding: 10px 60px;
+    }
+
+    @include more-than-laptop {
+      width: fit-content;
+    }
+  }
+
+  &__name_input {
+    grid-area: name;
+  }
+
+  &__last_name_input {
+    grid-area: last_name;
+  }
+
+  &__email_input {
+    grid-area: email;
+  }
+
+  &__username_input {
+    grid-area: username;
+  }
+
+  &__phone_input {
+    grid-area: phone;
+  }
+
+  &__password_input {
+    grid-area: password;
+  }
+
+  &__confirm_password_input {
+    grid-area: confirm_password;
+  }
+
+  &__date_input {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    grid-area: date;
+
+    @include more-than-mobile {
+      flex-direction: row;
+    }
+  }
+
+  &__login {
+    @include more-than-mobile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   }
 }

@@ -1,13 +1,16 @@
 import { FC, useCallback, useState } from "react";
-import MenuIcon from "@mui/icons-material/Menu";
-import LoginSharpIcon from "@mui/icons-material/LoginSharp";
+import NotificationsOutlinedIcon from "@mui/icons-material/NotificationsOutlined";
 import { Link } from "@shared/components/link";
 import { SideMenu } from "@shared/components/side-menu";
 
+import { SearchSharp } from "@mui/icons-material";
+import { useSelector } from "react-redux";
+import { userInitialsSelector } from "@shared/store/auth/selectors";
 import styles from "./index.module.scss";
 
 export const HeaderContainer: FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const userInitials = useSelector(userInitialsSelector);
 
   const handleToggleSideMenu = useCallback(() => {
     setIsMenuOpen((previousState) => !previousState);
@@ -34,23 +37,18 @@ export const HeaderContainer: FC = () => {
         </li>
       </ul>
       <div className={styles.header__buttons}>
-        <Link to="/auth" className={styles.header__buttons__login}>
-          Login
-        </Link>
-        <Link
-          to="/auth/register"
-          className={styles.header__buttons__signup}
-          type="button"
-        >
-          Sign up
-        </Link>
-      </div>
-      <div className={styles.header__icons}>
-        <button type="button">
-          <LoginSharpIcon />
+        <button type="button" className={styles.header__buttons__icon_wrapper}>
+          <SearchSharp />
         </button>
-        <button onClick={handleToggleSideMenu} type="button">
-          <MenuIcon />
+        <button type="button" className={styles.header__buttons__icon_wrapper}>
+          <NotificationsOutlinedIcon />
+        </button>
+        <button
+          onClick={handleToggleSideMenu}
+          type="button"
+          className={styles.header__buttons__icon_wrapper}
+        >
+          {userInitials}
         </button>
       </div>
 

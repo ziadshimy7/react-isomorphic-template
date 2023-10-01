@@ -1,28 +1,68 @@
 @import "@shared/styles/mixins";
 @import "@shared/styles/variables";
 
-.auth__form {
-  display: flex;
-  flex-direction: column;
+.auth {
+  display: grid;
   padding: 10px 50px;
   gap: 35px;
   box-shadow: rgba(0, 0, 0, 0.14) 0px 2px 4px, rgba(0, 0, 0, 0.12) 0px 3px 4px,
-    rgba(0, 0, 0, 0.2) 0px 1px 5px;
-  height: fit-content;
+    rgba(21, 16, 16, 0.2) 0px 1px 5px;
   justify-self: center;
+  max-width: 900px;
   background-color: #fff;
+  text-align: center;
 
   @include more-than-mobile {
-    padding: 80px 50px;
-    gap: 60px;
-    border-radius: 10px;
+    padding: 30px;
   }
 
   @include more-than-laptop {
     margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
   }
 
   &__title {
     color: $grey-500-color;
+  }
+
+  &__helper_text {
+    font-weight: 700;
+    font-size: 18px;
+    color: black;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 20px;
+    background-color: #311044;
+    height: 50px;
+    font-weight: 700;
+    width: 220px;
+    border-radius: 80px;
+    justify-self: center;
+  }
+
+  &__login {
+    display: grid;
+    gap: 35px;
+    box-shadow: rgba(0, 0, 0, 0.14) 0px 2px 4px, rgba(0, 0, 0, 0.12) 0px 3px 4px,
+      rgba(21, 16, 16, 0.2) 0px 1px 5px;
+    justify-self: center;
+    max-width: 900px;
+    background-color: #fff;
+    text-align: center;
+
+    @include more-than-mobile {
+      gap: 20px;
+      width: 730px;
+      padding: 10px 50px;
+    }
   }
 }

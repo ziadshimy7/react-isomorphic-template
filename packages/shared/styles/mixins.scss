@@ -12,10 +12,6 @@
   color: inherit;
   font-family: inherit;
   text-decoration: none;
-
-  &:hover {
-    text-decoration: underline;
-  }
 }
 
 @mixin reset-list {
@@ -122,7 +118,7 @@
 
   border: 1px solid $primary-color;
   background-color: $primary-color;
-  color: white;
+  color: #1f1750;
 
   &:disabled {
     border: 1px solid $text-grey-color;

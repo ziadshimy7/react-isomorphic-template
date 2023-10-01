@@ -1,5 +1,5 @@
-import { uiSlice } from "@shared/store/slices/ui";
-import { Meta } from "@shared/store/types/ui";
+import { uiSlice } from "@shared/store/ui/slice";
+import { Meta } from "@shared/store/ui/types";
 import { useAppDispatch } from "@shared/store/use-app-dispatch";
 import { useEffect } from "react";
 

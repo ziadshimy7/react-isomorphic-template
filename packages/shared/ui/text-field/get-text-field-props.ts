@@ -7,15 +7,12 @@ import {
   UseFormRegisterReturn,
 } from "react-hook-form";
 
-import { LoadingStatus } from "@shared/models/types";
-
 import { BaseTextFieldProps } from "./types";
 
 type GetTextFieldProps = <Values extends FieldValues>(
   name: FieldPath<Values>,
   options: {
     register: UseFormRegister<Values>;
-    loadingStatus?: LoadingStatus;
     options?: RegisterOptions<Values, FieldPath<Values>>;
     errors?: FieldErrors<Values>;
   }
@@ -23,7 +20,7 @@ type GetTextFieldProps = <Values extends FieldValues>(
 
 export const getTextFieldProps: GetTextFieldProps = (
   name,
-  { register, errors, options, loadingStatus }
+  { register, errors, options }
 ) => {
   const error = errors?.[name];
 
@@ -31,6 +28,5 @@ export const getTextFieldProps: GetTextFieldProps = (
     ...register(name, options),
     error: Boolean(error),
     helperText: error?.message?.toString(),
-    disabled: loadingStatus === "pending",
   };
 };

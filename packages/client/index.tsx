@@ -1,13 +1,14 @@
 import { hydrateRoot } from "react-dom/client";
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import { routes } from "@shared/routes";
+import { RouterProvider } from "react-router-dom";
 import { App } from "@shared/app";
 
 import { getDeviceTypeByWidth } from "@shared/utils/get-device-type-by-width";
 import { createStore } from "@shared/store/create-store";
-import { uiSlice } from "@shared/store/slices/ui";
+import { uiSlice } from "@shared/store/ui/slice";
+import { router } from "./create-browser-router";
 
-const router = createBrowserRouter(routes);
+import "@shared/store/auth/middlewares";
+
 const cssAssets = window.__CSS_ASSETS__;
 const preloadedState = window.__PRELOADED_STATE__;
 const jsAssets = window.__JS_ASSETS__;
