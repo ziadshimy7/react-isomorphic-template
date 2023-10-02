@@ -20,6 +20,6 @@ Keep the commit messages concise.
 
 First, write the prefix, followed by a colon and space.
 
-Use the imperative, present tense in your commit messages, like "add" not "added", or "fix" not "fixed".
+Use the imperative, present tense in your commit messages, like "fix" not "fixed".
 
-If you are not sure which prefix to use, it's always a good idea to refer back to this guide or discuss with your team.
+If you are not sure which prefix to use, it's always a good idea to refer back to this guide or discuss with your team...
