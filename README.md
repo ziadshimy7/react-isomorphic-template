@@ -2,7 +2,7 @@ Git Commit Syntax Guide
 This repository follows a specific commit message convention to make it easier for anyone reviewing the commit history to understand the changes. The convention is straightforward and consists of a few predefined prefixes.
 
 Commit Message Format
-Each commit message consists of a header, and the header has a specific format:
+Each commit message consists of a header, and the header has a specific format:hhh
 
 <prefix>: <short description of the change>
 
