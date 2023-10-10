@@ -23,9 +23,6 @@ export const AuthLoginContainer: FC = () => {
   return (
     <div className={clsx(styles.auth, styles.auth__login)}>
       <h2 style={{ color: "black" }}>Welcome back !</h2>
-      <div className={styles.auth__header}>
-        <p>Login</p>
-      </div>
       <p className={styles.auth__helper_text}>
         Please enter your info to login
       </p>
