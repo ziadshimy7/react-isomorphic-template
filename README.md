@@ -5,7 +5,7 @@ The convention is straightforward and consists of a few predefined prefixes.
 ## Commit Message Format
 Each commit message consists of a header, and the header has a specific format
 
-<prefix>: <short description of the change>
+**prefix: short description of the change**
 
 For example: feat: `add login functionality`
 
