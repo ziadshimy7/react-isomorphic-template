@@ -83,15 +83,6 @@ export const AuthForm: FC<AuthFormProps> = ({
           placeholder="Your birth date"
           {...getTextFieldProps("date", { register, errors })}
         />
-        <TextField
-          startElement={
-            <PasswordSharpIcon className={styles.auth_form__icons} />
-          }
-          variant="outline"
-          placeholder="Card type"
-          type="password"
-          {...getTextFieldProps("confirmPassword", { register, errors })}
-        />
       </div>
       <TextField
         startElement={<PasswordSharpIcon className={styles.auth_form__icons} />}

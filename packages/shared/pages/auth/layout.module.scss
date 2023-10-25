@@ -6,6 +6,10 @@
   width: 100%;
   justify-content: center;
   align-items: center;
+  background: url("/images/home-page/nebula.jpg") #311044;
+  background-position: bottom;
+  background-size: cover;
+  height: 100%;
 
   @include more-than-mobile {
     background: url("/images/home-page/nebula.jpg") #311044;

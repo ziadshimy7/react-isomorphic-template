@@ -3,6 +3,7 @@ import NotificationsOutlinedIcon from "@mui/icons-material/NotificationsOutlined
 import { Link } from "@shared/components/link";
 import { SideMenu } from "@shared/components/side-menu";
 
+import MenuIcon from "@mui/icons-material/Menu";
 import { SearchSharp } from "@mui/icons-material";
 import { useSelector } from "react-redux";
 import { userInitialsSelector } from "@shared/store/auth/selectors";
@@ -48,7 +49,7 @@ export const HeaderContainer: FC = () => {
           type="button"
           className={styles.header__buttons__icon_wrapper}
         >
-          {userInitials}
+          {userInitials || <MenuIcon />}
         </button>
       </div>
 

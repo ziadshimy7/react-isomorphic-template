@@ -78,6 +78,9 @@
     display: flex;
     gap: 16px;
     align-items: center;
+    @include more-than-tablet {
+      display: none;
+    }
 
     &__icon_wrapper {
       @include reset-button;
