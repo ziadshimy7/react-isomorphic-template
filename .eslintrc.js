@@ -32,6 +32,12 @@ module.exports = {
   },
   plugins: ["react", "@typescript-eslint", "prettier", "unicorn"],
   rules: {
+    "prettier/prettier": [
+      "error",
+      {
+        endOfLine: "auto",
+      },
+    ],
     "react/jsx-handler-names": [
       "error",
       {

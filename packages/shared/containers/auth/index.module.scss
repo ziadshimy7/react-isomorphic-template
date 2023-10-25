@@ -11,6 +11,7 @@
   max-width: 900px;
   background-color: #fff;
   text-align: center;
+  border-radius: 10px;
 
   @include more-than-mobile {
     padding: 30px;
