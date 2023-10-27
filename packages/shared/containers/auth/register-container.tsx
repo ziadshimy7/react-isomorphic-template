@@ -24,7 +24,7 @@ export const AuthRegisterContainer: FC = () => {
   return (
     <div className={styles.auth}>
       <div className={styles.auth__header}>
-        <p>Register</p>
+        <p>Registration</p>
       </div>
       <AuthForm loadingStatus={loadingStatus} onFormSubmit={handleFormSubmit} />
     </div>

@@ -3,6 +3,7 @@ import NotificationsOutlinedIcon from "@mui/icons-material/NotificationsOutlined
 import { Link } from "@shared/components/link";
 import { SideMenu } from "@shared/components/side-menu";
 
+import MenuIcon from "@mui/icons-material/Menu";
 import { SearchSharp } from "@mui/icons-material";
 import { useSelector } from "react-redux";
 import { userInitialsSelector } from "@shared/store/auth/selectors";
@@ -49,15 +50,13 @@ export const HeaderContainer: FC = () => {
         <button type="button" className={styles.header__buttons__icon_wrapper}>
           <NotificationsOutlinedIcon />
         </button>
-        {userInitials && (
-          <button
-            onClick={handleToggleSideMenu}
-            type="button"
-            className={styles.header__buttons__icon_wrapper}
-          >
-            {userInitials}
-          </button>
-        )}
+        <button
+          onClick={handleToggleSideMenu}
+          type="button"
+          className={styles.header__buttons__icon_wrapper}
+        >
+          {userInitials || <MenuIcon />}
+        </button>
       </div>
 
       <SideMenu onCloseMenu={handleToggleSideMenu} visible={isMenuOpen} />
