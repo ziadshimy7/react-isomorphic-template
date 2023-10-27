@@ -11,6 +11,7 @@ import { ButtonWithLoader } from "@shared/ui/button-with-loader";
 import clsx from "clsx";
 import styles from "./index.module.scss";
 import { LoginAuthFormFields, LoginAuthFormProps } from "./types";
+import { Link } from "../link";
 
 export const AuthLoginForm: FC<LoginAuthFormProps> = ({
   onFormSubmit,
@@ -35,7 +36,6 @@ export const AuthLoginForm: FC<LoginAuthFormProps> = ({
         variant="outline"
         placeholder="Enter your email"
         {...getTextFieldProps("email", { register, errors })}
-        className={styles.auth_form__username_input}
       />
       <TextField
         startElement={<PasswordSharpIcon className={styles.auth_form__icons} />}
@@ -43,8 +43,10 @@ export const AuthLoginForm: FC<LoginAuthFormProps> = ({
         placeholder="Enter your password"
         type="password"
         {...getTextFieldProps("password", { register, errors })}
-        className={styles.auth_form__confirm_password_input}
       />
+      <Link className={styles.auth_form__register_link} to="/auth/register">
+        Don&apos;t have an account? Register
+      </Link>
       <ButtonWithLoader
         loadingStatus={loadingStatus}
         className={styles.auth_form__submit_button}

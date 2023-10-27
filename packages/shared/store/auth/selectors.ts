@@ -22,6 +22,6 @@ export const userInitialsSelector = createSelector(
       return initials;
     }
 
-    return "";
+    return null;
   }
 );

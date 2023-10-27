@@ -35,6 +35,12 @@ export const HeaderContainer: FC = () => {
         <li>
           <Link to="#s">About</Link>
         </li>
+        <li>
+          <Link to="/auth/register">Register</Link>
+        </li>
+        <li>
+          <Link to="/auth">Login</Link>
+        </li>
       </ul>
       <div className={styles.header__buttons}>
         <button type="button" className={styles.header__buttons__icon_wrapper}>
@@ -43,13 +49,15 @@ export const HeaderContainer: FC = () => {
         <button type="button" className={styles.header__buttons__icon_wrapper}>
           <NotificationsOutlinedIcon />
         </button>
-        <button
-          onClick={handleToggleSideMenu}
-          type="button"
-          className={styles.header__buttons__icon_wrapper}
-        >
-          {userInitials}
-        </button>
+        {userInitials && (
+          <button
+            onClick={handleToggleSideMenu}
+            type="button"
+            className={styles.header__buttons__icon_wrapper}
+          >
+            {userInitials}
+          </button>
+        )}
       </div>
 
       <SideMenu onCloseMenu={handleToggleSideMenu} visible={isMenuOpen} />

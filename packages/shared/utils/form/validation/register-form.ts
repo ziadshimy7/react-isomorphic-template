@@ -15,11 +15,8 @@ export const authFormFieldsSchema = z
       .string()
       .email({ message: "Please Enter a valid email" })
       .min(1, { message: "Required" }),
-    date: z.date(),
-    phone: z
-      .string()
-      .min(12, { message: "Please enter a valid phone number" })
-      .includes("_", { message: "Please enter a valid phone number" }),
+    date: z.string(),
+    phone: z.string().min(12, { message: "Please enter a valid phone number" }),
     password: z.string().min(12, {
       message:
         "Please enter a valid password with combination of uppercase letters, lower case letters and symbols",

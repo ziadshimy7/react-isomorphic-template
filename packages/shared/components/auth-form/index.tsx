@@ -2,7 +2,7 @@ import { TextField } from "@shared/ui/text-field";
 import { MaskedTextField } from "@shared/ui/text-field/masked-text-filed";
 import { getTextFieldProps } from "@shared/ui/text-field/get-text-field-props";
 import { FC } from "react";
-import { useForm } from "react-hook-form";
+import { Controller, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import EmailIcon from "@mui/icons-material/Email";
 import PersonSharpIcon from "@mui/icons-material/PersonSharp";
@@ -14,8 +14,10 @@ import DateRangeIcon from "@mui/icons-material/DateRange";
 import { authFormFieldsSchema } from "@shared/utils/form/validation/register-form";
 
 import { ButtonWithLoader } from "@shared/ui/button-with-loader";
+import { AuthDatePicker } from "@shared/ui/date-picker";
 import styles from "./index.module.scss";
 import { AuthFormFields, AuthFormProps } from "./types";
+import { Link } from "../link";
 
 export const AuthForm: FC<AuthFormProps> = ({
   onFormSubmit,
@@ -23,84 +25,91 @@ export const AuthForm: FC<AuthFormProps> = ({
 }) => {
   const {
     register,
+    control,
     handleSubmit,
+    watch,
     formState: { errors },
   } = useForm<AuthFormFields>({
     mode: "onChange",
     resolver: zodResolver(authFormFieldsSchema),
   });
 
+  console.log(watch());
+
   return (
-    <form className={styles.auth_form} onSubmit={handleSubmit(onFormSubmit)}>
-      <TextField
-        startElement={<LoginSharpIcon className={styles.auth_form__icons} />}
-        variant="outline"
-        placeholder="Enter your username"
-        {...getTextFieldProps("userName", { register, errors })}
-        className={styles.auth_form__username_input}
-      />
-      <TextField
-        variant="outline"
-        startElement={<PersonSharpIcon className={styles.auth_form__icons} />}
-        placeholder="Enter your first name"
-        {...getTextFieldProps("firstName", { register, errors })}
-        className={styles.auth_form__name_input}
-      />
-      <TextField
-        variant="outline"
-        startElement={<PersonSharpIcon className={styles.auth_form__icons} />}
-        placeholder="Enter your last name"
-        {...getTextFieldProps("lastName", { register, errors })}
-        className={styles.auth_form__last_name_input}
-      />
-      <TextField
-        startElement={<EmailIcon className={styles.auth_form__icons} />}
-        variant="outline"
-        placeholder="Enter your email"
-        {...getTextFieldProps("email", { register, errors })}
-        className={styles.auth_form__email_input}
-      />
-      <MaskedTextField
-        mask="+79999999999"
-        placeholder="+7__________"
-        startElement={<PhoneAndroidIcon className={styles.auth_form__icons} />}
-        variant="outline"
-        {...getTextFieldProps("phone", { register, errors })}
-        className={styles.auth_form__phone_input}
-      />
-      <TextField
-        startElement={<ShieldSharpIcon className={styles.auth_form__icons} />}
-        variant="outline"
-        placeholder="Enter your password"
-        type="password"
-        {...getTextFieldProps("password", { register, errors })}
-        className={styles.auth_form__password_input}
-      />
-      <div className={styles.auth_form__date_input}>
+    <form onSubmit={handleSubmit(onFormSubmit)}>
+      <div className={styles.auth_form}>
         <TextField
-          startElement={<DateRangeIcon className={styles.auth_form__icons} />}
+          startElement={<LoginSharpIcon className={styles.auth_form__icons} />}
           variant="outline"
-          placeholder="Your birth date"
-          {...getTextFieldProps("date", { register, errors })}
+          placeholder="Enter your username"
+          {...getTextFieldProps("userName", { register, errors })}
         />
+        <MaskedTextField
+          mask="+79999999999"
+          placeholder="+7__________"
+          startElement={
+            <PhoneAndroidIcon className={styles.auth_form__icons} />
+          }
+          variant="outline"
+          {...getTextFieldProps("phone", { register, errors })}
+        />
+        <TextField
+          variant="outline"
+          startElement={<PersonSharpIcon className={styles.auth_form__icons} />}
+          placeholder="Enter your first name"
+          {...getTextFieldProps("firstName", { register, errors })}
+        />
+        <TextField
+          variant="outline"
+          startElement={<PersonSharpIcon className={styles.auth_form__icons} />}
+          placeholder="Enter your last name"
+          {...getTextFieldProps("lastName", { register, errors })}
+        />
+        <TextField
+          startElement={<EmailIcon className={styles.auth_form__icons} />}
+          variant="outline"
+          placeholder="Enter your email"
+          {...getTextFieldProps("email", { register, errors })}
+        />
+        <TextField
+          startElement={<ShieldSharpIcon className={styles.auth_form__icons} />}
+          variant="outline"
+          placeholder="Enter your password"
+          type="password"
+          {...getTextFieldProps("password", { register, errors })}
+        />
+        <Controller
+          name="date"
+          control={control}
+          render={({ field: { value, onChange: handleChange, ...fields } }) => (
+            <AuthDatePicker onChange={handleChange} value={value} {...fields}>
+              <TextField
+                startElement={
+                  <DateRangeIcon className={styles.auth_form__icons} />
+                }
+                variant="outline"
+                placeholder="Your birth date"
+                onChange={handleChange}
+                value={value}
+              />
+            </AuthDatePicker>
+          )}
+        />
+
         <TextField
           startElement={
             <PasswordSharpIcon className={styles.auth_form__icons} />
           }
           variant="outline"
-          placeholder="Card type"
+          placeholder="Confirm your password"
           type="password"
           {...getTextFieldProps("confirmPassword", { register, errors })}
         />
+        <Link className={styles.auth_form__register_link} to="/auth">
+          Already have an account ? Sign in
+        </Link>
       </div>
-      <TextField
-        startElement={<PasswordSharpIcon className={styles.auth_form__icons} />}
-        variant="outline"
-        placeholder="Confirm your password"
-        type="password"
-        {...getTextFieldProps("confirmPassword", { register, errors })}
-        className={styles.auth_form__confirm_password_input}
-      />
       <ButtonWithLoader
         loadingStatus={loadingStatus}
         className={styles.auth_form__submit_button}

@@ -3,21 +3,24 @@
 
 .auth {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   padding: 10px 50px;
   gap: 35px;
-  box-shadow: rgba(0, 0, 0, 0.14) 0px 2px 4px, rgba(0, 0, 0, 0.12) 0px 3px 4px,
-    rgba(21, 16, 16, 0.2) 0px 1px 5px;
   justify-self: center;
   max-width: 900px;
   background-color: #fff;
+  justify-content: center;
   text-align: center;
+  margin-top: 30px;
 
   @include more-than-mobile {
     padding: 30px;
+    box-shadow: rgba(0, 0, 0, 0.14) 0px 2px 4px, rgba(0, 0, 0, 0.12) 0px 3px 4px,
+      rgba(21, 16, 16, 0.2) 0px 1px 5px;
+    margin-top: 60px;
   }
 
   @include more-than-laptop {
-    margin-top: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -52,8 +55,6 @@
   &__login {
     display: grid;
     gap: 35px;
-    box-shadow: rgba(0, 0, 0, 0.14) 0px 2px 4px, rgba(0, 0, 0, 0.12) 0px 3px 4px,
-      rgba(21, 16, 16, 0.2) 0px 1px 5px;
     justify-self: center;
     max-width: 900px;
     background-color: #fff;
@@ -63,6 +64,8 @@
       gap: 20px;
       width: 730px;
       padding: 10px 50px;
+      box-shadow: rgba(0, 0, 0, 0.14) 0px 2px 4px,
+        rgba(0, 0, 0, 0.12) 0px 3px 4px, rgba(21, 16, 16, 0.2) 0px 1px 5px;
     }
   }
 }

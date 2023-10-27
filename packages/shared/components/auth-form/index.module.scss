@@ -5,18 +5,14 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+  font-size: 14px;
 
   @include more-than-tablet {
-    display: grid;
-    justify-content: center;
-    grid-template-areas:
-      "username email . ."
-      "name last_name . ."
-      "phone date card ."
-      "password confirm_password . ."
-      "submit submit submit submit";
-
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    font-size: 16px;
   }
 
   &__icons {
@@ -25,56 +21,25 @@
 
   &__submit_button {
     @include primary-button;
+    width: 100%;
 
-    grid-area: submit;
-    justify-self: center;
     color: #fff;
+    margin-top: 20px;
+    display: inline-flex;
 
     @include more-than-mobile {
       padding: 10px 60px;
-    }
-
-    @include more-than-laptop {
-      width: fit-content;
+      width: auto;
     }
   }
 
-  &__name_input {
-    grid-area: name;
-  }
+  &__register_link {
+    @include reset-link;
 
-  &__last_name_input {
-    grid-area: last_name;
-  }
+    color: $primary-color;
 
-  &__email_input {
-    grid-area: email;
-  }
-
-  &__username_input {
-    grid-area: username;
-  }
-
-  &__phone_input {
-    grid-area: phone;
-  }
-
-  &__password_input {
-    grid-area: password;
-  }
-
-  &__confirm_password_input {
-    grid-area: confirm_password;
-  }
-
-  &__date_input {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    grid-area: date;
-
-    @include more-than-mobile {
-      flex-direction: row;
+    &:hover {
+      text-decoration: underline;
     }
   }
 

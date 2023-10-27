@@ -59,14 +59,16 @@ export const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
             </div>
           )}
         </div>
-        <span
-          className={clsx(
-            "text_field__helper_text",
-            error && "text_field__helper_text--error"
-          )}
-        >
-          {helperText}
-        </span>
+        {helperText && (
+          <span
+            className={clsx(
+              "text_field__helper_text",
+              error && "text_field__helper_text--error"
+            )}
+          >
+            {helperText}
+          </span>
+        )}
       </div>
     );
   }

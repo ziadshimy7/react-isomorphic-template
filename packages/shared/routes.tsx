@@ -65,4 +65,5 @@ export const routes: RouteObject[] = [
       },
     ],
   },
+  { path: "/dashboard", element: <div>your element</div> },
 ];
