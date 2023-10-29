@@ -1,0 +1,20 @@
+@import "@shared/styles/mixins";
+@import "@shared/styles/variables";
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: center;
+  background-color: #2dd7ae;
+
+  @include more-than-tablet {
+    padding: 30px 20px;
+  }
+
+  @include more-than-laptop {
+    padding: 30px 55px;
+    height: 100px;
+  }
+}

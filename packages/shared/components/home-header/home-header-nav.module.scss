@@ -1,0 +1,37 @@
+@import "@shared/styles/mixins";
+@import "@shared/styles/variables";
+
+.header_list {
+  @include reset-list;
+
+  font-size: 18px;
+  align-items: center;
+  color: #fff;
+
+  @include more-than-tablet {
+    display: flex;
+    font-size: 20px;
+    gap: 30px;
+  }
+
+  @include more-than-laptop {
+    font-size: 24px;
+    gap: 40px;
+  }
+
+  a {
+    @include reset-link;
+
+    font-size: 20px;
+    color: #311044;
+    font-weight: 700;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .active {
+    text-decoration-line: underline;
+    text-underline-offset: 3px;
+  }
+}

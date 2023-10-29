@@ -10,15 +10,6 @@ const MainLayout = dynamic(
   { asset: "main-layout" }
 );
 
-const HomePage = dynamic(
-  () =>
-    import(
-      /* webpackChunkName: "home-page" */
-      "@shared/pages/index"
-    ),
-  { asset: "home-page" }
-);
-
 const AuthLayout = dynamic(
   () =>
     import(
@@ -26,6 +17,24 @@ const AuthLayout = dynamic(
       "@shared/pages/auth/_layout"
     ),
   { asset: "auth-layout" }
+);
+
+const HomeLayout = dynamic(
+  () =>
+    import(
+      /* webpackChunkName: "home-layout" */
+      "@shared/pages/home/_layout"
+    ),
+  { asset: "home-layout" }
+);
+
+const HomePage = dynamic(
+  () =>
+    import(
+      /* webpackChunkName: "home-page" */
+      "@shared/pages/home"
+    ),
+  { asset: "home-page" }
 );
 
 const AuthRegisterPage = dynamic(
@@ -52,10 +61,6 @@ export const routes: RouteObject[] = [
     element: <MainLayout />,
     children: [
       {
-        index: true,
-        element: <HomePage />,
-      },
-      {
         path: "auth",
         element: <AuthLayout />,
         children: [
@@ -65,5 +70,9 @@ export const routes: RouteObject[] = [
       },
     ],
   },
-  { path: "/dashboard", element: <div>your element</div> },
+  {
+    path: "/home",
+    element: <HomeLayout />,
+    children: [{ index: true, element: <HomePage /> }],
+  },
 ];

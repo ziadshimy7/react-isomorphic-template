@@ -27,15 +27,12 @@ export const AuthForm: FC<AuthFormProps> = ({
     register,
     control,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm<AuthFormFields>({
     mode: "onChange",
     defaultValues: { date: "January 1, 2000" },
     resolver: zodResolver(authFormFieldsSchema),
   });
-
-  console.log(watch());
 
   return (
     <form onSubmit={handleSubmit(onFormSubmit)}>
