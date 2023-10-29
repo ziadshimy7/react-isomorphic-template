@@ -6,15 +6,15 @@ import "react-datepicker/dist/react-datepicker.css";
 interface AuthDatePickerProps {
   children?: ReactNode;
   onChange: (value: string) => void;
-  value: string;
+  value?: string;
 }
 
 export const AuthDatePicker = forwardRef<ReactDatePicker, AuthDatePickerProps>(
   function AuthDatePicker({ children, onChange, value }, ref) {
     const [dateValue, setDateValue] = useState<Date | undefined>(
-      new Date(value)
+      value != null ? new Date(value) : new Date()
     );
-
+    console.log(dateValue, new Date(), value);
     const handleChange = (value: Date) => {
       setDateValue(value);
       const formatDate = new Intl.DateTimeFormat("ru-RU").format(value);

@@ -31,6 +31,7 @@ export const AuthForm: FC<AuthFormProps> = ({
     formState: { errors },
   } = useForm<AuthFormFields>({
     mode: "onChange",
+    defaultValues: { date: "January 1, 2000" },
     resolver: zodResolver(authFormFieldsSchema),
   });
 
@@ -72,13 +73,6 @@ export const AuthForm: FC<AuthFormProps> = ({
           placeholder="Enter your email"
           {...getTextFieldProps("email", { register, errors })}
         />
-        <TextField
-          startElement={<ShieldSharpIcon className={styles.auth_form__icons} />}
-          variant="outline"
-          placeholder="Enter your password"
-          type="password"
-          {...getTextFieldProps("password", { register, errors })}
-        />
         <Controller
           name="date"
           control={control}
@@ -96,6 +90,13 @@ export const AuthForm: FC<AuthFormProps> = ({
             </AuthDatePicker>
           )}
         />
+        <TextField
+          startElement={<ShieldSharpIcon className={styles.auth_form__icons} />}
+          variant="outline"
+          placeholder="Enter your password"
+          type="password"
+          {...getTextFieldProps("password", { register, errors })}
+        />
 
         <TextField
           startElement={
@@ -106,10 +107,10 @@ export const AuthForm: FC<AuthFormProps> = ({
           type="password"
           {...getTextFieldProps("confirmPassword", { register, errors })}
         />
-        <Link className={styles.auth_form__register_link} to="/auth">
-          Already have an account ? Sign in
-        </Link>
       </div>
+      <Link className={styles.auth_form__register_link} to="/auth">
+        Already have an account ? Sign in
+      </Link>
       <ButtonWithLoader
         loadingStatus={loadingStatus}
         className={styles.auth_form__submit_button}
