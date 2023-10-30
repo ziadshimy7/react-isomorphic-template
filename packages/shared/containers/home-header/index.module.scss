@@ -17,4 +17,10 @@
     padding: 30px 55px;
     height: 100px;
   }
+  @include less-than-tablet {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
 }
