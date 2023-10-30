@@ -10,7 +10,7 @@
   background-color: #2dd7ae;
 
   @include more-than-tablet {
-    padding: 30px 20px;
+    padding: 20px 20px;
   }
 
   @include more-than-laptop {

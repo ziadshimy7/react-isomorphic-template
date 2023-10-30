@@ -8,6 +8,7 @@ const HomeLayout: FC = () => (
     <main>
       <Outlet />
     </main>
+
     <ScrollRestoration />
   </>
 );

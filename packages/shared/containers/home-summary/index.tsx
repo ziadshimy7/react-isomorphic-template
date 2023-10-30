@@ -10,7 +10,7 @@ export const HomeSummary: FC = () => (
       <HomeAccountSummary />
     </div>
     <div>
-      <h1>TransactionTypes</h1>
+      <h1>Transaction Types</h1>
       <HomeTransactionTypes />
     </div>
   </section>

@@ -1,0 +1,36 @@
+.RecentTransactions {
+  display: flex;
+  width: 23.125rem;
+  max-height: 24.625rem;
+  padding: 1.25rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  background-color: rgba(31, 23, 80, 0.25);
+  border-radius: 1.25rem;
+}
+.RecentTransactions h1 {
+  color: var(--white-white, #fff);
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.RecentTransactions ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1.125rem;
+  background: var(--text-dark-25, rgba(31, 23, 80, 0.25));
+  border: none;
+  padding: 0.125rem 0.75rem;
+  color: #2dd7ae;
+  font-size: 1.5rem;
+  align-self: center;
+}

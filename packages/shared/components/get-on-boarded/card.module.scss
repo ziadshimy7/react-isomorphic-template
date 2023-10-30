@@ -1,0 +1,39 @@
+.BoardCard {
+  display: flex;
+  height: 6.1875rem;
+  width: 10rem;
+  padding: 1rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+  border-radius: 1.25rem;
+  background: var(--text-dark-25, rgba(31, 23, 80, 0.25));
+}
+
+.cardHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.3rem;
+  justify-content: flex-start;
+}
+.cardHeader h2 {
+  color: var(--white-white, #fff);
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.progress {
+  display: flex;
+  flex-direction: column;
+}
+
+.percentage {
+  color: var(--text-dark-3, #c2bce4);
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}

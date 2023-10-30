@@ -6,7 +6,7 @@ import { BankCard } from "../bank-card";
 // import styles from "./index.module.scss";
 
 export const HomeAccountSummary: FC = () => (
-  <Carousel>
+  <Carousel width={300} showStatus={false} showIndicators={false}>
     <BankCard />
     <BankCard />
     <BankCard />
