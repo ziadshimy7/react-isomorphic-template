@@ -1,9 +1,9 @@
-// .cards {
-//   display: flex;
-//   flex-direction: row;
-//   overflow-x: scroll;
-//   list-style-type: none;
-//   display: flex;
-//   gap: 15px;
-//   scroll-behavior: smooth;
-// }
+@import "@shared/styles/mixins";
+@import "@shared/styles/variables";
+.carousel {
+  @include less-than-tablet {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 20px;
+  }
+}

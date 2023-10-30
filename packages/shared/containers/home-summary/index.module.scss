@@ -1,17 +1,37 @@
+@import "@shared/styles/mixins";
+@import "@shared/styles/variables";
+
 .section {
   display: flex;
   padding: 20px;
   align-items: flex-start;
   background-color: #2dd7ae;
   justify-content: space-around;
+  @include less-than-tablet {
+    flex-direction: column;
+    justify-content: center;
+  }
 }
-.section h1 {
+.section h1,
+.account {
   color: var(--text-dark-1, #1f1750);
   font-size: 1.5rem;
   font-style: normal;
   font-weight: bold;
   line-height: normal;
   margin-bottom: 20px;
+  @include less-than-tablet {
+    color: var(--text-dark-1, #1f1750);
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+}
+.account {
+  @include less-than-tablet {
+    display: none;
+  }
 }
 .summary {
   max-width: 40%;

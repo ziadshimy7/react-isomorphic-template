@@ -22,7 +22,7 @@ export const GetOnBoarded: FC = () => (
         </li>
       </ul>
     </div> */}
-    <div>
+    <div className={styles.mobileVersion}>
       <Carousel width={160} showStatus={false} showIndicators={false}>
         <BoardCard />
         <BoardCard />

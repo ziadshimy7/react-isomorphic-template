@@ -9,14 +9,37 @@ import { FC } from "react";
 import styles from "./index.module.scss";
 
 const QuickActions: FC = () => (
-  <section className={styles.quickActions}>
-    <QuickActionButton Icon={<AccountBalanceIcon />} Action="Banking" />
-    <QuickActionButton Icon={<ReceiptIcon />} Action="Bills Pay" />
-    <QuickActionButton Icon={<PaymentsIcon />} Action="Fund Transfer" />
-    <QuickActionButton Icon={<MessageIcon />} Action="Message Center" />
-    <QuickActionButton Icon={<HandshakeIcon />} Action="Partners" />
-    <QuickActionButton Icon={<LoyaltyIcon />} Action="Benifits" />
-  </section>
+  <>
+    <h1 className={styles.h1Mobile}>Quick Features</h1>
+    <section className={styles.quickActions}>
+      <QuickActionButton Icon={<AccountBalanceIcon />} Action="Banking" />
+      <QuickActionButton Icon={<ReceiptIcon />} Action="Bills Pay" />
+      <QuickActionButton Icon={<PaymentsIcon />} Action="Fund Transfer" />
+      <QuickActionButton Icon={<MessageIcon />} Action="Message Center" />
+      <QuickActionButton Icon={<HandshakeIcon />} Action="Partners" />
+      <QuickActionButton Icon={<LoyaltyIcon />} Action="Benifits" />
+    </section>
+    <nav className={styles.mobileNav}>
+      <h1 className={styles.h1MobNav}>Transfer</h1>
+      <ul>
+        <li>
+          <AccountBalanceIcon />
+        </li>
+        <li>
+          <ReceiptIcon />
+        </li>
+        <li>
+          <PaymentsIcon />
+        </li>
+        <li>
+          <MessageIcon />
+        </li>
+        <li>
+          <LoyaltyIcon />
+        </li>
+      </ul>
+    </nav>
+  </>
 );
 
 export default QuickActions;

@@ -8,6 +8,9 @@
   align-items: center;
   color: #fff;
 
+  @include less-than-tablet {
+    display: none;
+  }
   @include more-than-tablet {
     display: flex;
     font-size: 20px;

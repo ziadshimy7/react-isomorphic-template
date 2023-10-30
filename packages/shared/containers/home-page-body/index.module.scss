@@ -1,13 +1,18 @@
+@import "@shared/styles/mixins";
+@import "@shared/styles/variables";
+
 .homePageBody {
   background-color: #352f58;
   padding-top: 20px;
-  height: 100vh;
   display: flex;
   flex-direction: row;
   gap: 1.8rem;
   margin: 0 auto;
   padding: 20px;
   justify-content: space-between;
+  @include less-than-tablet {
+    flex-wrap: wrap;
+  }
 }
 
 .homePageBodyMain {
