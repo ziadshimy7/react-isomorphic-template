@@ -19,6 +19,12 @@ export const GetOnBoarded: FC = () => (
         <li>
           <BoardCard />
         </li>
+        <li>
+          <BoardCard />
+        </li>
+        <li>
+          <BoardCard />
+        </li>
       </ul>
     </div>
   </>

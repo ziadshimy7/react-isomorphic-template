@@ -6,7 +6,7 @@
   padding: 20px;
   align-items: flex-start;
   background-color: #2dd7ae;
-  justify-content: space-around;
+  justify-content: space-between;
 
   & h1 {
     color: #1f1750;
@@ -27,6 +27,23 @@
       font-weight: bold;
       line-height: normal;
       margin-bottom: 20px;
+    }
+  }
+
+  @include less-than-tablet {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    & h1 {
+      font-size: 0.875rem;
+      text-align: left;
+    }
+    &__summary {
+      max-width: 100%;
+      text-align: left;
+
+      &__account {
+        display: none;
+      }
     }
   }
 }

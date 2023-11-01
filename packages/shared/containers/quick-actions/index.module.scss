@@ -1,23 +1,32 @@
 @import "@shared/styles/mixins";
 @import "@shared/styles/variables";
 
-.h1Mobile {
-  display: none;
+.quickActions {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 
-  @include less-than-tablet {
-    display: block;
+  &__h1Mobile {
+    display: none;
     color: #fff;
     font-size: 0.875rem;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
   }
-}
+  & ul {
+    @include reset-list;
 
-.quickActions {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-  flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  @include less-than-tablet {
+    &__h1Mobile {
+      display: block;
+    }
+  }
 }
