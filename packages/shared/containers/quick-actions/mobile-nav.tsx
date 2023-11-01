@@ -1,8 +1,3 @@
-import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
-import ReceiptIcon from "@mui/icons-material/Receipt";
-import PaymentsIcon from "@mui/icons-material/Payments";
-import MessageIcon from "@mui/icons-material/Message";
-import LoyaltyIcon from "@mui/icons-material/Loyalty";
 import { FC } from "react";
 import styles from "./mobile-nav.module.scss";
 
@@ -11,19 +6,19 @@ export const QuickActionsMobileNav: FC = () => (
     <h1>Transfer</h1>
     <ul>
       <li>
-        <AccountBalanceIcon />
+        <img src="/images/home-page/banking.svg" alt="banking" />
       </li>
       <li>
-        <ReceiptIcon />
+        <img src="/images/home-page/bills-pay.svg" alt="banking" />
       </li>
       <li>
-        <PaymentsIcon />
+        <img src="/images/home-page/fund-transfer.svg" alt="banking" />
       </li>
       <li>
-        <MessageIcon />
+        <img src="/images/home-page/message-center.svg" alt="banking" />
       </li>
       <li>
-        <LoyaltyIcon />
+        <img src="/images/home-page/partner.svg" alt="banking" />
       </li>
     </ul>
   </nav>

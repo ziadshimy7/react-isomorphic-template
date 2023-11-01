@@ -1,10 +1,4 @@
 import { QuickActionButton } from "@shared/components/quick-action-button";
-import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
-import ReceiptIcon from "@mui/icons-material/Receipt";
-import PaymentsIcon from "@mui/icons-material/Payments";
-import MessageIcon from "@mui/icons-material/Message";
-import HandshakeIcon from "@mui/icons-material/Handshake";
-import LoyaltyIcon from "@mui/icons-material/Loyalty";
 import { FC } from "react";
 import styles from "./index.module.scss";
 import { QuickActionsMobileNav } from "./mobile-nav";
@@ -15,23 +9,40 @@ const QuickActions: FC = () => (
       <h1 className={styles.quickActions__h1Mobile}>Quick Features</h1>
       <ul>
         <li>
-          <QuickActionButton icon={<AccountBalanceIcon />} action="Banking" />
+          <QuickActionButton
+            icon="/images/home-page/banking.svg"
+            action="Banking"
+          />
         </li>
         <li>
-          <QuickActionButton icon={<ReceiptIcon />} action="Bills Pay" />
+          <QuickActionButton
+            icon="/images/home-page/bills-pay.svg"
+            action="Bills Pay"
+          />
         </li>
         <li>
-          <QuickActionButton icon={<PaymentsIcon />} action="Fund Transfer" />
+          <QuickActionButton
+            icon="/images/home-page/fund-transfer.svg"
+            action="Fund Transfer"
+          />
         </li>
         <li>
-          <QuickActionButton icon={<MessageIcon />} action="Message Center" />
+          <QuickActionButton
+            icon="/images/home-page/message-center.svg"
+            action="Message Center"
+          />
         </li>
         <li>
-          {" "}
-          <QuickActionButton icon={<HandshakeIcon />} action="Partners" />
+          <QuickActionButton
+            icon="/images/home-page/partner.svg"
+            action="Partners"
+          />
         </li>
         <li>
-          <QuickActionButton icon={<LoyaltyIcon />} action="Benifits" />
+          <QuickActionButton
+            icon="/images/home-page/benifits.svg"
+            action="Benifits"
+          />
         </li>
       </ul>
     </section>
