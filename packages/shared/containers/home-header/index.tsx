@@ -4,7 +4,7 @@ import { HomeHeaderNav } from "@shared/components/home-header/home-header-nav";
 import { HomeHeaderIcons } from "@shared/components/home-header/home-header-icons";
 import styles from "./index.module.scss";
 
-const HomeHeaderContainer: FC = () => (
+export const HomeHeaderContainer: FC = () => (
   <header>
     <nav className={styles.header}>
       <Logo />
@@ -13,5 +13,3 @@ const HomeHeaderContainer: FC = () => (
     </nav>
   </header>
 );
-
-export default HomeHeaderContainer;

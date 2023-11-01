@@ -1,19 +1,23 @@
+@import "@shared/styles/mixins";
+@import "@shared/styles/variables";
+
 .btn {
+  @include reset-button;
   cursor: pointer;
   background-color: #1f175040;
   border-radius: 1rem;
   backdrop-filter: blur(30px);
   padding: 0.5rem 2.5rem;
-  border: none;
-  color: var(--white-white, #fff);
+  color: #fff;
   text-align: center;
   align-self: stretch;
-}
-.btn p {
-  color: var(--white-white, #fff);
-  text-align: center;
-  font-size: 0.75rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
+
+  &__paragraph {
+    color: #fff;
+    text-align: center;
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
 }

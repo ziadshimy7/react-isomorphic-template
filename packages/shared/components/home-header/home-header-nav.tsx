@@ -16,7 +16,7 @@ export const HomeHeaderNav: FC = () => (
     <li>
       <NavLink
         to="/#s"
-        className={({ isActive }) => (isActive ? styles.active : "")}
+        className={({ isActive }) => clsx(isActive && styles.active)}
       >
         DASHBOARD
       </NavLink>
@@ -24,7 +24,7 @@ export const HomeHeaderNav: FC = () => (
     <li>
       <NavLink
         to="/#s"
-        className={({ isActive }) => (isActive ? styles.active : "")}
+        className={({ isActive }) => clsx(isActive && styles.active)}
       >
         WALLET
       </NavLink>
@@ -32,7 +32,7 @@ export const HomeHeaderNav: FC = () => (
     <li>
       <NavLink
         to="/#s"
-        className={({ isActive }) => (isActive ? styles.active : "")}
+        className={({ isActive }) => clsx(isActive && styles.active)}
       >
         TRANSFER
       </NavLink>
@@ -40,7 +40,7 @@ export const HomeHeaderNav: FC = () => (
     <li>
       <NavLink
         to="/#s"
-        className={({ isActive }) => (isActive ? styles.active : "")}
+        className={({ isActive }) => clsx(isActive && styles.active)}
       >
         BILLPAY
       </NavLink>

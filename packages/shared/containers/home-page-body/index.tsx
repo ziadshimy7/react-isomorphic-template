@@ -7,13 +7,13 @@ import { RecentPayments } from "@shared/components/recent-payments";
 import styles from "./index.module.scss";
 
 const HomePageBody: FC = () => (
-  <body className={styles.homePageBody}>
-    <div className={styles.homePageBodyMain}>
+  <body className={styles.home_page_body}>
+    <div className={styles.home_page_body__main}>
       <QuickActions />
       <Offers />
       <RecentPayments />
     </div>
-    <aside className={styles.homePageAside}>
+    <aside className={styles.home_page_body__aside}>
       <RecentTransactions />
       <GetOnBoarded />
     </aside>

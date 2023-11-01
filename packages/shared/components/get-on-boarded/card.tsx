@@ -4,13 +4,13 @@ import LinearProgress from "@mui/joy/LinearProgress";
 import styles from "./card.module.scss";
 
 export const BoardCard: FC = () => (
-  <div className={styles.BoardCard}>
-    <div className={styles.cardHeader}>
+  <div className={styles.board_card}>
+    <div className={styles.board_card__header}>
       <PersonOutlineIcon style={{ color: "#2DD7AE" }} />
-      <h2>Upadate Profile</h2>
+      <h2 className={styles.board_card__header__title}>Upadate Profile</h2>
     </div>
-    <div className={styles.progress}>
-      <p className={styles.percentage}>15% Completed</p>
+    <div className={styles.board_card__progress}>
+      <p className={styles.board_card__progress__percentage}>15% Completed</p>
       <LinearProgress
         color="warning"
         determinate

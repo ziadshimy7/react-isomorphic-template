@@ -1,4 +1,4 @@
 export interface QuickActionProps {
-  Icon: React.ReactNode;
-  Action: string;
+  icon: React.ReactNode;
+  action: string;
 }

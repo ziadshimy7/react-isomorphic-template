@@ -5,8 +5,8 @@ import { HomeTransactionTypes } from "../../components/home-transaction-types";
 
 export const HomeSummary: FC = () => (
   <section className={styles.section}>
-    <div className={styles.summary}>
-      <h1 className={styles.account}>Account Summary</h1>
+    <div className={styles.section__summary}>
+      <h1 className={styles.section__summary__account}>Account Summary</h1>
       <HomeAccountSummary />
     </div>
     <div>

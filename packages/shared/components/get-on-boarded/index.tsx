@@ -1,13 +1,12 @@
 import { FC } from "react";
-import { Carousel } from "react-responsive-carousel";
 import { BoardCard } from "./card";
 import styles from "./index.module.scss";
 
 export const GetOnBoarded: FC = () => (
   <>
-    <h1 className={styles.h1}>Get On Boarded</h1>
-    {/* <div className={styles.getOnBoarded}>
-      <ul>
+    <div className={styles.get_on_boarded}>
+      <h1 className={styles.get_on_boarded__heading}>Get On Boarded</h1>
+      <ul className={styles.get_on_boarded__list}>
         <li>
           <BoardCard />
         </li>
@@ -21,14 +20,6 @@ export const GetOnBoarded: FC = () => (
           <BoardCard />
         </li>
       </ul>
-    </div> */}
-    <div className={styles.mobileVersion}>
-      <Carousel width={160} showStatus={false} showIndicators={false}>
-        <BoardCard />
-        <BoardCard />
-        <BoardCard />
-        <BoardCard />
-      </Carousel>
     </div>
   </>
 );

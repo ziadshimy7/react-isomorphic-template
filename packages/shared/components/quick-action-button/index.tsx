@@ -2,9 +2,9 @@ import { FC } from "react";
 import { QuickActionProps } from "./types";
 import styles from "./index.module.scss";
 
-export const QuickActionButton: FC<QuickActionProps> = ({ Icon, Action }) => (
+export const QuickActionButton: FC<QuickActionProps> = ({ icon, action }) => (
   <button type="button" className={styles.btn}>
-    {Icon}
-    <p>{Action}</p>
+    {icon}
+    <p className={styles.btn__paragraph}>{action}</p>
   </button>
 );

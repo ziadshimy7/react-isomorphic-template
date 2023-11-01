@@ -7,38 +7,20 @@ import HandshakeIcon from "@mui/icons-material/Handshake";
 import LoyaltyIcon from "@mui/icons-material/Loyalty";
 import { FC } from "react";
 import styles from "./index.module.scss";
+import { QuickActionsMobileNav } from "./mobile-nav";
 
 const QuickActions: FC = () => (
   <>
     <h1 className={styles.h1Mobile}>Quick Features</h1>
     <section className={styles.quickActions}>
-      <QuickActionButton Icon={<AccountBalanceIcon />} Action="Banking" />
-      <QuickActionButton Icon={<ReceiptIcon />} Action="Bills Pay" />
-      <QuickActionButton Icon={<PaymentsIcon />} Action="Fund Transfer" />
-      <QuickActionButton Icon={<MessageIcon />} Action="Message Center" />
-      <QuickActionButton Icon={<HandshakeIcon />} Action="Partners" />
-      <QuickActionButton Icon={<LoyaltyIcon />} Action="Benifits" />
+      <QuickActionButton icon={<AccountBalanceIcon />} action="Banking" />
+      <QuickActionButton icon={<ReceiptIcon />} action="Bills Pay" />
+      <QuickActionButton icon={<PaymentsIcon />} action="Fund Transfer" />
+      <QuickActionButton icon={<MessageIcon />} action="Message Center" />
+      <QuickActionButton icon={<HandshakeIcon />} action="Partners" />
+      <QuickActionButton icon={<LoyaltyIcon />} action="Benifits" />
     </section>
-    <nav className={styles.mobileNav}>
-      <h1 className={styles.h1MobNav}>Transfer</h1>
-      <ul>
-        <li>
-          <AccountBalanceIcon />
-        </li>
-        <li>
-          <ReceiptIcon />
-        </li>
-        <li>
-          <PaymentsIcon />
-        </li>
-        <li>
-          <MessageIcon />
-        </li>
-        <li>
-          <LoyaltyIcon />
-        </li>
-      </ul>
-    </nav>
+    <QuickActionsMobileNav />
   </>
 );
 

@@ -1,7 +1,7 @@
 @import "@shared/styles/mixins";
 @import "@shared/styles/variables";
 
-.homePageBody {
+.home_page_body {
   background-color: #352f58;
   padding-top: 20px;
   display: flex;
@@ -10,19 +10,16 @@
   margin: 0 auto;
   padding: 20px;
   justify-content: space-between;
-  @include less-than-tablet {
-    flex-wrap: wrap;
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
   }
-}
 
-.homePageBodyMain {
-  display: flex;
-  flex-direction: column;
-  gap: 1.8rem;
-}
-
-.homePageAside {
-  display: flex;
-  flex-direction: column;
-  gap: 1.8rem;
+  &__aside {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+  }
 }

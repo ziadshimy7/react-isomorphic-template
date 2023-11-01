@@ -1,9 +1,14 @@
 @import "@shared/styles/mixins";
 @import "@shared/styles/variables";
+
 .carousel {
-  @include less-than-tablet {
+  display: block;
+
+  &__list {
+    list-style: none;
     display: flex;
-    justify-content: flex-start;
-    margin-left: 20px;
+    flex-direction: row;
+    gap: 20px;
+    overflow-x: scroll;
   }
 }

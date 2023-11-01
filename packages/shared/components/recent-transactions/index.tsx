@@ -3,7 +3,7 @@ import { Transaction } from "./transaction";
 import styles from "./index.module.scss";
 
 export const RecentTransactions: FC = () => (
-  <div className={styles.RecentTransactions}>
+  <div className={styles.recent_transactions}>
     <h1>Recent Transactions</h1>
     <ul>
       <li>
@@ -22,7 +22,7 @@ export const RecentTransactions: FC = () => (
         <Transaction />
       </li>
     </ul>
-    <button type="button" className={styles.btn}>
+    <button type="button" className={styles.recent_transactions__btn}>
       ...
     </button>
   </div>

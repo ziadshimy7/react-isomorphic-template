@@ -15,11 +15,7 @@ export const HomeHeaderIcons: FC = () => {
       <button type="button" className={styles.buttons__icon_wrapper}>
         <NotificationsOutlinedIcon />
       </button>
-      <button
-        // onClick={handleToggleSideMenu}
-        type="button"
-        className={styles.buttons__icon_wrapper}
-      >
+      <button type="button" className={styles.buttons__icon_wrapper}>
         {userInitials || "OM"}
       </button>
     </div>
