@@ -7,31 +7,43 @@ export const RecentPayments: FC = () => (
     <h1>Recent Payments</h1>
     <ul>
       <li>
-        <Payment />
+        <Payment
+          logo="/images/home-page/electricity.svg"
+          paymentName="Electricity Bill"
+        />
       </li>
       <li>
-        <Payment />
+        <Payment
+          logo="/images/home-page/internet.svg"
+          paymentName="Internet Bill"
+        />
       </li>
       <li>
-        <Payment />
+        <Payment logo="/images/home-page/nike.svg" paymentName="Nike Store" />
       </li>
       <li>
-        <Payment />
+        <Payment
+          logo="/images/home-page/educationfee.svg"
+          paymentName="Education Fee"
+        />
       </li>
       <li>
-        <Payment />
+        <Payment logo="/images/home-page/payment.svg" paymentName="Netflix" />
       </li>
       <li>
-        <Payment />
+        <Payment
+          logo="/images/home-page/batastore.svg"
+          paymentName="Bata Store"
+        />
       </li>
       <li>
-        <Payment />
+        <Payment
+          logo="/images/home-page/onlinecourse.svg"
+          paymentName="Online Course"
+        />
       </li>
       <li>
-        <Payment />
-      </li>
-      <li>
-        <Payment />
+        <Payment logo="/images/home-page/gasbill.svg" paymentName="Gas Bill" />
       </li>
     </ul>
   </div>

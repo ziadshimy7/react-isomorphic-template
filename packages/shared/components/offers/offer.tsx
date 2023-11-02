@@ -1,9 +1,10 @@
 import { FC } from "react";
 import styles from "./offer.module.scss";
+import { OffersProps } from "./types";
 
-export const Offer: FC = () => (
+export const Offer: FC<OffersProps> = ({ offer, backGround, fill }) => (
   <div className={styles.offer}>
-    <img src="/images/home-page/offer.png" alt="offer" />
+    <img src={backGround} alt={offer} />
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="240"
@@ -14,9 +15,9 @@ export const Offer: FC = () => (
     >
       <path
         d="M0 38.5555L240.002 0.855469V83.0012C240.002 94.0469 231.048 103.001 220.002 103.001H20C8.95431 103.001 0 94.0469 0 83.0012V38.5555Z"
-        fill="#1F1750"
+        fill={fill}
       />
     </svg>
-    <p>30% Discount on Every Hotel Booking For Five Days</p>
+    <p>{offer}</p>
   </div>
 );

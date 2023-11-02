@@ -1,9 +1,10 @@
 import { FC } from "react";
+import { PaymentProps } from "./types";
 import styles from "./payment.module.scss";
 
-export const Payment: FC = () => (
+export const Payment: FC<PaymentProps> = ({ paymentName, logo }) => (
   <div className={styles.payment}>
-    <img src="/images/home-page/payment.svg" alt="Electricity Bill" />
-    <p>Electricity Bill</p>
+    <img src={logo} alt={paymentName} />
+    <p>{paymentName}</p>
   </div>
 );
