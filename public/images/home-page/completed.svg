@@ -1,0 +1,11 @@
+<svg width="160" height="161" viewBox="0 0 160 161" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="80" cy="80.5" r="60" fill="#1F1750" fill-opacity="0.25"/>
+<rect x="71.0898" y="20.5" width="68.5581" height="132" rx="16" fill="#1F1750"/>
+<rect x="99.3691" y="132.5" width="12" height="12" rx="6" fill="#625C87"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M134.28 69.1449C144.785 63.8976 152 53.0413 152 40.5C152 22.8269 137.673 8.5 120 8.5C102.327 8.5 88 22.8269 88 40.5C88 56.4997 99.7422 69.7569 115.079 72.124V79.9045C115.079 81.5657 116.987 82.5028 118.302 81.4873L134.28 69.1449Z" fill="#2DD7AE"/>
+<path d="M109 39.9729L117.471 48.4435L133 32.9141" stroke="#1F1750" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="9" y="61.707" width="74" height="74" rx="15" fill="#625C87" stroke="#2DD7AE" stroke-width="2"/>
+<circle cx="46.001" cy="89.4805" r="9.91016" fill="#1F1750"/>
+<path d="M46.001 99.3906C38.5811 99.3906 32.1842 103.771 29.2551 110.087C27.3962 114.095 31.1335 117.84 35.5518 117.84H56.4502C60.8685 117.84 64.6057 114.095 62.7468 110.087C59.8177 103.771 53.4209 99.3906 46.001 99.3906Z" fill="#1F1750"/>
+<path d="M45.0371 25.2695L53.5224 33.7548" stroke="#625C87" stroke-width="8" stroke-linecap="round"/>
+</svg>

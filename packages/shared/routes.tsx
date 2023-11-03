@@ -46,6 +46,15 @@ const AuthRegisterPage = dynamic(
   { asset: "register-page" }
 );
 
+const CompeltedRegisterPage = dynamic(
+  () =>
+    import(
+      /* webpackChunkName: "complete-register-page" */
+      "@shared/pages/auth/complete-register"
+    ),
+  { asset: "register-page" }
+);
+
 const AuthLoginPage = dynamic(
   () =>
     import(
@@ -66,6 +75,7 @@ export const routes: RouteObject[] = [
         children: [
           { index: true, element: <AuthLoginPage /> },
           { path: "register", element: <AuthRegisterPage /> },
+          { path: "completed", element: <CompeltedRegisterPage /> },
         ],
       },
     ],
