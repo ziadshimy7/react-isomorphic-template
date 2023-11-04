@@ -1,0 +1,14 @@
+@import "@shared/styles/mixins";
+@import "@shared/styles/variables";
+
+.carousel {
+  display: block;
+
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    overflow-x: scroll;
+  }
+}

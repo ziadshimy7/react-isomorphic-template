@@ -1,5 +1,5 @@
 import { ProtectedRoute } from "@shared/components/protected-route";
-import HomeContainer from "@shared/containers/home-page";
+import HomeContainer from "@shared/containers/home-page-summary";
 import { isAuthorizedSelector } from "@shared/store/auth/selectors";
 import { useSetMeta } from "@shared/utils/hooks/use-set-meta";
 import { FC } from "react";

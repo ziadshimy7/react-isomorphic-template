@@ -1,0 +1,39 @@
+@import "@shared/styles/mixins";
+@import "@shared/styles/variables";
+
+.buttons {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+
+  &__icon_wrapper {
+    @include reset-button;
+    background-color: #1f1750;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    color: #fff;
+
+    svg {
+      fill: #2dd7ae !important;
+    }
+  }
+
+  a {
+    display: none;
+    font-weight: 500;
+    line-height: normal;
+    cursor: pointer;
+
+    @include more-than-tablet {
+      display: flex;
+      padding: 0 25px;
+      height: 64px;
+      font-size: 20px;
+      align-items: center;
+    }
+  }
+}

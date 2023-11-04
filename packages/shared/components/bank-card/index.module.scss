@@ -1,0 +1,40 @@
+.bank_card {
+  width: 18.5rem;
+  height: 10rem;
+  border-radius: 1.25rem;
+  background-image: url(/images/home-page/cardBG.svg);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  justify-content: space-between;
+  color: #fff;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1rem;
+  box-shadow: 0px 4px 120px 0px #1f1750 inset;
+
+  &__icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  &__data {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  &__exp {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__apple_pay {
+      display: flex;
+      align-items: center;
+    }
+  }
+}

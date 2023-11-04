@@ -1,0 +1,22 @@
+@import "@shared/styles/mixins";
+@import "@shared/styles/variables";
+
+.payment {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+  & img {
+    width: 5rem;
+    height: 5rem;
+  }
+  & p {
+    color: #fff;
+    text-align: center;
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+}

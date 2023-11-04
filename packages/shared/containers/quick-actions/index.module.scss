@@ -1,0 +1,32 @@
+@import "@shared/styles/mixins";
+@import "@shared/styles/variables";
+
+.quickActions {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  &__h1Mobile {
+    display: none;
+    color: #fff;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  & ul {
+    @include reset-list;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  @include less-than-tablet {
+    &__h1Mobile {
+      display: block;
+    }
+  }
+}

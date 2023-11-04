@@ -1,0 +1,24 @@
+@import "@shared/styles/mixins";
+@import "@shared/styles/variables";
+
+.recent_payments {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  & h1 {
+    color: #fff;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  & ul {
+    @include reset-list;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    max-width: 95%;
+  }
+}
