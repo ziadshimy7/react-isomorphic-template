@@ -52,7 +52,7 @@ const CompeltedRegisterPage = dynamic(
       /* webpackChunkName: "complete-register-page" */
       "@shared/pages/auth/complete-register"
     ),
-  { asset: "register-page" }
+  { asset: "complete-register-page" }
 );
 
 const AuthLoginPage = dynamic(
