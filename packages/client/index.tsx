@@ -15,17 +15,11 @@ const jsAssets = window.__JS_ASSETS__;
 
 const store = createStore({ preloadedState });
 
-store.dispatch(
-  uiSlice.actions.setDeviceTypeEvent(getDeviceTypeByWidth(window.innerWidth))
-);
+store.dispatch(uiSlice.actions.setDeviceTypeEvent(getDeviceTypeByWidth(window.innerWidth)));
 
-window.addEventListener("resize", (event) => {
+window.addEventListener("resize", event => {
   if (event.target instanceof Window) {
-    store.dispatch(
-      uiSlice.actions.setDeviceTypeEvent(
-        getDeviceTypeByWidth(event.target.innerWidth)
-      )
-    );
+    store.dispatch(uiSlice.actions.setDeviceTypeEvent(getDeviceTypeByWidth(event.target.innerWidth)));
   }
 });
 
@@ -33,5 +27,9 @@ hydrateRoot(
   document,
   <App store={store} css={cssAssets} js={jsAssets}>
     <RouterProvider router={router} />
-  </App>
+  </App>,
 );
+
+if (module.hot) {
+  module.hot.accept();
+}

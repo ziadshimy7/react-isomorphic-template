@@ -13,7 +13,6 @@ const serverDevelopmentConfiguration = merge(serverCommonConfiguration, {
   plugins: [
     new NodemonPlugin({
       script: "./.build/server/index.js",
-      watch: ["./.build/server/**/*"],
     }),
     new MiniCssExtractPlugin({
       filename: "[name].[contenthash].css",

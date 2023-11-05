@@ -43,6 +43,17 @@ const serverCommonConfiguration: Configuration = {
         },
       },
       {
+        test: /\.css$/,
+        use: [
+          {
+            loader: "style-loader",
+          },
+          {
+            loader: "css-loader",
+          },
+        ],
+      },
+      {
         test: /\.scss$/,
         exclude: /\.module.scss$/,
         use: [
@@ -56,18 +67,7 @@ const serverCommonConfiguration: Configuration = {
           "sass-loader",
         ],
       },
-      {
-        test: /\.css$/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          {
-            loader: "css-loader",
-            options: {
-              url: false,
-            },
-          },
-        ],
-      },
+
       {
         test: /\.module.scss$/,
         use: [

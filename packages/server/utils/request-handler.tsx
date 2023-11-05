@@ -1,11 +1,7 @@
 import { RequestHandler } from "express";
 import { renderToPipeableStream } from "react-dom/server";
 import { App } from "@shared/app";
-import {
-  StaticRouterProvider,
-  createStaticHandler,
-  createStaticRouter,
-} from "react-router-dom/server";
+import { StaticRouterProvider, createStaticHandler, createStaticRouter } from "react-router-dom/server";
 import { Assets, FileAssets } from "packages/global-types/types";
 import { routes } from "@shared/routes";
 import MobileDetect from "mobile-detect";
@@ -49,7 +45,7 @@ export const requestHandler: RequestHandler = async (request, response) => {
     {
       paths: [],
       pathAssets: [],
-    }
+    },
   );
 
   const assets = readJsonFile<FileAssets>(".build/assets.json", {});
@@ -69,13 +65,13 @@ export const requestHandler: RequestHandler = async (request, response) => {
   });
 
   const { pipe } = renderToPipeableStream(
-    <App store={store} js={pageAssets.js} css={pageAssets.css}>
+    <App store={store} css={pageAssets.css}>
       <StaticRouterProvider router={staticRouter} context={routerContext} />
     </App>,
     {
+      bootstrapScripts: pageAssets.js,
       bootstrapScriptContent: `
       ${getCssAssetsMarkup(pageAssets.css)}
-      ${getJsAssetsMarkup(pageAssets.js)}
       ${getPreloadedStateMarkup(store)}
       ${getEnvironmentVariablesMarkup()}`,
 
@@ -83,6 +79,6 @@ export const requestHandler: RequestHandler = async (request, response) => {
         response.setHeader("Content-type", "text/html");
         pipe(response);
       },
-    }
+    },
   );
 };

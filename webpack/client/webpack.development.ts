@@ -13,9 +13,7 @@ const clientDevelopmentConfiguration = merge(clientCommonConfiguration, {
     type: "filesystem",
     cacheDirectory: path.resolve(process.cwd(), ".build", ".cache"),
   },
-  entry: [
-    `webpack-hot-middleware/client?path=http://localhost:${developmentPort}/client/__hmr`,
-  ],
+  entry: [`webpack-hot-middleware/client?path=http://localhost:${developmentPort}/client/__hmr`],
   output: {
     publicPath: `http://localhost:${developmentPort}/client/`,
   },

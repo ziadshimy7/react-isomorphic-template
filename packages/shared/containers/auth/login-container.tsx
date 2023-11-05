@@ -17,19 +17,14 @@ export const AuthLoginContainer: FC = () => {
     (values: LoginAuthFormFields) => {
       dispatch(authLogin(values));
     },
-    [dispatch]
+    [dispatch],
   );
 
   return (
     <div className={clsx(styles.auth, styles.auth__login)}>
-      <h2 style={{ color: "black" }}>Welcome back !</h2>
-      <p className={styles.auth__helper_text}>
-        Please enter your info to login
-      </p>
-      <AuthLoginForm
-        loadingStatus={loadingStatus}
-        onFormSubmit={handleFormSubmit}
-      />
+      <h2 style={{ color: "black" }}>Welcome asdasdasd !</h2>
+      <p className={styles.auth__helper_text}>Please enter your info to login</p>
+      <AuthLoginForm loadingStatus={loadingStatus} onFormSubmit={handleFormSubmit} />
     </div>
   );
 };
