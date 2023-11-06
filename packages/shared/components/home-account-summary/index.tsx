@@ -1,5 +1,4 @@
 import { FC } from "react";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { BankCard } from "../bank-card";
 import styles from "./index.module.scss";
 

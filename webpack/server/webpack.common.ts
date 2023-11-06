@@ -43,17 +43,6 @@ const serverCommonConfiguration: Configuration = {
         },
       },
       {
-        test: /\.css$/,
-        use: [
-          {
-            loader: "style-loader",
-          },
-          {
-            loader: "css-loader",
-          },
-        ],
-      },
-      {
         test: /\.scss$/,
         exclude: /\.module.scss$/,
         use: [

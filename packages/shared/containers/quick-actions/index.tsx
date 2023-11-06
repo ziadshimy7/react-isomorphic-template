@@ -3,51 +3,31 @@ import { FC } from "react";
 import styles from "./index.module.scss";
 import { QuickActionsMobileNav } from "./mobile-nav";
 
-const QuickActions: FC = () => (
+export const QuickActions: FC = () => (
   <>
     <section className={styles.quickActions}>
       <h1 className={styles.quickActions__h1Mobile}>Quick Features</h1>
       <ul>
         <li>
-          <QuickActionButton
-            icon="/images/home-page/banking.svg"
-            action="Banking"
-          />
+          <QuickActionButton icon="/images/home-page/banking.svg" action="Banking" />
         </li>
         <li>
-          <QuickActionButton
-            icon="/images/home-page/bills-pay.svg"
-            action="Bills Pay"
-          />
+          <QuickActionButton icon="/images/home-page/bills-pay.svg" action="Bills Pay" />
         </li>
         <li>
-          <QuickActionButton
-            icon="/images/home-page/fund-transfer.svg"
-            action="Fund Transfer"
-          />
+          <QuickActionButton icon="/images/home-page/fund-transfer.svg" action="Fund Transfer" />
         </li>
         <li>
-          <QuickActionButton
-            icon="/images/home-page/message-center.svg"
-            action="Message Center"
-          />
+          <QuickActionButton icon="/images/home-page/message-center.svg" action="Message Center" />
         </li>
         <li>
-          <QuickActionButton
-            icon="/images/home-page/partner.svg"
-            action="Partners"
-          />
+          <QuickActionButton icon="/images/home-page/partner.svg" action="Partners" />
         </li>
         <li>
-          <QuickActionButton
-            icon="/images/home-page/benifits.svg"
-            action="Benifits"
-          />
+          <QuickActionButton icon="/images/home-page/benifits.svg" action="Benifits" />
         </li>
       </ul>
     </section>
     <QuickActionsMobileNav />
   </>
 );
-
-export default QuickActions;

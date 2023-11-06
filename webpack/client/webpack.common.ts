@@ -42,7 +42,6 @@ const clientCommonConfiguration: Configuration = {
       },
     },
   },
-  externalsType: "script",
   module: {
     rules: [
       {
@@ -63,17 +62,6 @@ const clientCommonConfiguration: Configuration = {
             ],
           },
         },
-      },
-      {
-        test: /\.css$/,
-        use: [
-          {
-            loader: "style-loader",
-          },
-          {
-            loader: "css-loader",
-          },
-        ],
       },
       {
         test: /\.scss$/,

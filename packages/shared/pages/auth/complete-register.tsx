@@ -1,5 +1,6 @@
-import { CompeltedRegisterContainer } from "@shared/containers/auth/complete-register-container";
+import { CompletedRegisterContainer } from "@shared/containers/auth/complete-register-container";
 import { FC } from "react";
 
-const CompeltedRegister: FC = () => <CompeltedRegisterContainer />;
-export default CompeltedRegister;
+const CompletedRegisterPage: FC = () => <CompletedRegisterContainer />;
+
+export default CompletedRegisterPage;

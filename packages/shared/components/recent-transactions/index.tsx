@@ -4,16 +4,10 @@ import styles from "./index.module.scss";
 
 export const RecentTransactions: FC = () => (
   <div className={styles.recent_transactions}>
-    <h1>Recent Transactions</h1>
+    <h1>Recent asd</h1>
     <ul>
       <li>
-        <Transaction
-          photo="/images/home-page/omar.jpeg"
-          amount={1560}
-          date="22 May, 2022"
-          rate={3}
-          name="Omar Zaid"
-        />
+        <Transaction photo="/images/home-page/omar.jpeg" amount={1560} date="22 May, 2022" rate={3} name="Omar Zaid" />
       </li>
       <li>
         <Transaction

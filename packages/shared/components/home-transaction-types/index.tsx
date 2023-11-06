@@ -23,7 +23,7 @@ export const HomeTransactionTypes: FC = () => {
         margin={{ right: 5 }}
         width={170}
         height={170}
-        legend={{ hidden: true }}
+        slotProps={{ legend: { hidden: true } }}
       />
     </article>
   );
