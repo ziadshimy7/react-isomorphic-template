@@ -29,7 +29,3 @@ hydrateRoot(
     <RouterProvider router={router} />
   </App>,
 );
-
-// if (module.hot) {
-//   module.hot.accept();
-// }
