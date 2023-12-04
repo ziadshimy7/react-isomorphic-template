@@ -54,3 +54,43 @@ export const Offers: FC = () => (
     </ul>
   </div>
 );
+
+/*  <Swiper spaceBetween={10} slidesPerView={3}>
+<SwiperSlide>
+  <Offer
+    backGround="/images/home-page/offer.png"
+    offer="30% Discount on Every Hotel Booking For Five Days"
+    fill="#1F1750"
+  />
+</SwiperSlide>
+<SwiperSlide>
+  <Offer
+    offer="BDT. 2,000 Discount
++ 3 Times ECO Coins"
+    backGround="/images/home-page/offer2.svg"
+    fill="#2DD7AE"
+  />
+</SwiperSlide>
+<SwiperSlide>
+  <Offer
+    offer="30% Discount on Every Hotel Booking For Five Days"
+    backGround="/images/home-page/offer3.svg"
+    fill="#1F1750"
+  />
+</SwiperSlide>
+<SwiperSlide>
+  <Offer
+    backGround="/images/home-page/offer.png"
+    offer="30% Discount on Every Hotel Booking For Five Days"
+    fill="#2DD7AE"
+  />
+</SwiperSlide>
+<SwiperSlide>
+  <Offer
+    offer="30% Discount on Every Hotel Booking For Five Days"
+    backGround="/images/home-page/offer3.svg"
+    fill="#1F1750"
+  />
+</SwiperSlide>
+</Swiper>
+*/
