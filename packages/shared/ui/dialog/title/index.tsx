@@ -1,6 +1,5 @@
-import { CloseIcon } from "@kari/icons";
-import clsx from "clsx";
 import { FC, MouseEventHandler, ReactNode } from "react";
+import { twMerge } from "tailwind-merge";
 
 interface DialogTitleProps {
   children?: ReactNode;
@@ -13,15 +12,21 @@ export const DialogTitle: FC<DialogTitleProps> = ({
   onClose: handleClose,
   className,
 }) => (
-  <div className={clsx("dialog__title", className)}>
-    <h3 className="dialog__title__title">{children}</h3>
+  <div
+    className={twMerge(
+      "flex items-center justify-between gap-x-2 border-b px-5 py-4",
+      className
+    )}
+  >
+    <div className="m-0 w-full">{children}</div>
     {handleClose && (
       <button
+        aria-label="close"
         type="button"
-        className="dialog__title__close_button"
+        className="flex p-1"
         onClick={handleClose}
       >
-        <CloseIcon className="dialog__title__close_button__icon" />
+        X
       </button>
     )}
   </div>

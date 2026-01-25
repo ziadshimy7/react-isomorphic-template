@@ -1,0 +1,8 @@
+{
+  "packages/server/entry-server.ts": {
+    "file": "entry-server.mjs",
+    "name": "entry-server",
+    "src": "packages/server/entry-server.ts",
+    "isEntry": true
+  }
+}

@@ -1,6 +1,7 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { DeviceType, Meta } from "./types";
-import { uiDomain, uiInitialState } from "./constants";
+import { uiDomain, uiInitialState } from "@shared/constants/ui";
+
+import { DeviceType, Meta } from "@shared/interfaces/ui";
 
 export const uiSlice = createSlice({
   name: uiDomain,
@@ -10,7 +11,12 @@ export const uiSlice = createSlice({
       draft.deviceType = action.payload;
     },
     setMeta: (draft, action: PayloadAction<Meta>) => {
-      draft.meta = action.payload;
+      draft.meta = {
+        ...action.payload,
+        title: action.payload.title
+          ? `${action.payload.title} | EDU`
+          : uiInitialState.meta.title,
+      };
     },
   },
 });

@@ -1,5 +1,4 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
-import clsx from "clsx";
 import {
   FC,
   KeyboardEventHandler,
@@ -7,9 +6,10 @@ import {
   useEffect,
   useRef,
 } from "react";
+import { twMerge } from "tailwind-merge";
 
-import { useForwardRef } from "@shared/utils/hooks/use-forward-ref";
 import { modalManager } from "@shared/utils/modal-manager";
+import { useForwardRef } from "@shared/utils/use-forward-ref";
 
 import { Backdrop } from "../backdrop";
 
@@ -52,7 +52,10 @@ export const ModalContent: FC<ModalProps> = ({
       ref={handleForkRef}
       onKeyDown={handleKeyDown}
       tabIndex={-1}
-      className={clsx(props.className, "modal")}
+      className={twMerge(
+        "fixed inset-0 z-[200] flex items-end justify-center overflow-hidden md:items-center",
+        props.className
+      )}
       {...props}
     >
       <Backdrop invisible={invisibleBackdrop} onClick={handleClose} />

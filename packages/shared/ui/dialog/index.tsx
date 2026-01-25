@@ -1,32 +1,32 @@
-import clsx from "clsx";
-import { FC, ReactNode } from "react";
+import { ReactNode, forwardRef } from "react";
+import { twMerge } from "tailwind-merge";
 
 import { Modal } from "../modal";
 import { ModalProps } from "../modal/types";
 
-import "./index.scss";
-
 export interface DialogProps extends ModalProps {
-  width?: number;
+  width?: string;
   height?: string | number;
   children: ReactNode;
   dialogClassName?: string;
+  onClose: () => void;
 }
 
-export const Dialog: FC<DialogProps> = ({
-  children,
-  width,
-  height,
-  dialogClassName,
-  ...props
-}) => (
-  <Modal {...props}>
-    <div
-      className={clsx("dialog", dialogClassName)}
-      role="dialog"
-      style={{ maxWidth: width, height }}
-    >
-      {children}
-    </div>
-  </Modal>
+export const Dialog = forwardRef<HTMLDivElement, DialogProps>(
+  ({ children, width, height, dialogClassName, ...props }, ref) => (
+    <Modal {...props}>
+      <div
+        ref={ref}
+        className={twMerge(
+          "z-20 box-border flex h-full w-full max-w-full flex-col overflow-hidden rounded bg-white md:h-fit md:max-h-full md:w-1/2",
+          dialogClassName
+        )}
+        role="dialog"
+        style={{ maxWidth: width, height }}
+      >
+        {children}
+      </div>
+    </Modal>
+  )
 );
+Dialog.displayName = "Dialog";

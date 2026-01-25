@@ -1,6 +1,6 @@
-import { RootSelector, RootState } from "packages/global-types/types";
-import { loadingEntityAdapter } from "./adapter";
-import { LoadingItem } from "./types";
+import { RootSelector, RootState } from "../types";
+import { loadingEntityAdapter } from "./entity-adapters";
+import { LoadingItem, LoadingStatus } from "./types";
 
 export const loadingEntityAdapterSelectors =
   loadingEntityAdapter.getSelectors<RootState>((state) => state.loading);
@@ -10,5 +10,5 @@ export const loadingSelector =
   (state) =>
     loadingEntityAdapterSelectors.selectById(state, typePrefix) ?? {
       typePrefix,
-      loadingStatus: "initial",
+      loadingStatus: LoadingStatus.Initial,
     };

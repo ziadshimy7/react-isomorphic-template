@@ -1,4 +1,4 @@
-import { loadingEntityAdapter } from "./adapter";
+import { loadingEntityAdapter } from "./entity-adapters";
 import { LoadingState } from "./types";
 
 export const loadingDomain = "loading";

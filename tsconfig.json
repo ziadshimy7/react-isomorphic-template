@@ -16,11 +16,10 @@
     "baseUrl": "./",
     "paths": {
       "@shared/*": ["packages/shared/*"],
-      "@client/*": ["packages/client/*"],
-      "@webpack/*": ["webpack/*"]
-    },
-    "plugins": [{ "name": "typescript-plugin-css-modules" }]
+      "@client/*": ["packages/client/*"]
+    }
   },
+  "include": ["src/**/*", "packages/**/*", "server.tsx", "vite.config.ts"],
   "ts-node": {
     "files": true
   }
